@@ -1,9 +1,7 @@
-import { configure } from '@storybook/react'
+import { configure, addDecorator } from '@storybook/react'
+import { select, withKnobs } from '@storybook/addon-knobs'
 
-// function loadStories() {
-//   require('../stories/index.js')
-//   // You can require as many stories as you need.
-// }
+addDecorator(withKnobs)
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../stories', true, /.stories.js$/)
