@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { boolean, select, text } from '@storybook/addon-knobs'
+import { action } from '@storybook/addon-actions'
 
 import { Button } from '../src'
 
@@ -23,7 +24,8 @@ storiesOf('Button', module)
       loading={boolean('Loading', false)}
       disabled={boolean('Disabled', false)}
 
-      href={text('href attribute', null)}
+      href={text('href attribute', '')}
+      onClick={action('Button Click')}
     >
       Default Button
     </Button>

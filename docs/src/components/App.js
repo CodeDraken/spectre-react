@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { Example } from 'react-example'
+import { Button } from 'react-spectre'
 
 const App = () => (
   <div>
     <p>App</p>
-    <Example />
+    <Button>Button</Button>
   </div>
 )
 
