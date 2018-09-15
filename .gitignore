@@ -1,13 +1,15 @@
 /coverage
 node_modules
-dist
-build
-lib
 .idea
 .history
 npm-debug.log
 package-lock.json
 .cache
+
+# builds
+dist
+build
+lib
 
 # Logs
 logs

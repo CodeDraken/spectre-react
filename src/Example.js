@@ -4,7 +4,7 @@ class Example extends Component {
   render () {
     return (
       <div>
-        <p>Example component</p>
+        <button className='btn'>Example component</button>
         <p>{this.props.children}</p>
       </div>
     )
