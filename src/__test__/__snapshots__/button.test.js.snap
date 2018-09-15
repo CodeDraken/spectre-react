@@ -9,7 +9,7 @@ exports[`Button snapshots Should be a default Button 1`] = `
 exports[`Button snapshots Should be an anchor button 1`] = `
 <a
   className="btn"
+  el="a"
   href="https://github.com/couds/react-bulma-components"
-  renderAs="a"
 />
 `;

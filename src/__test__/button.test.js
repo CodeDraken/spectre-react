@@ -61,18 +61,6 @@ describe('Button', () => {
     expect(wrapper.text()).toBe('Home')
   })
 
-  describe('snapshots', () => {
-    it('Should be a default Button', () => {
-      const component = renderer.create(<Button />)
-      expect(component.toJSON()).toMatchSnapshot()
-    })
-
-    it('Should be an anchor button', () => {
-      const component = renderer.create(<Button renderAs='a' href='https://github.com/couds/react-bulma-components' />)
-      expect(component.toJSON()).toMatchSnapshot()
-    })
-  })
-
   describe('onClick', () => {
     it('calls props.onClick if it exists', () => {
       const onClick = jest.fn()
@@ -88,6 +76,18 @@ describe('Button', () => {
 
       wrapper.simulate('click')
       expect(onClick).toHaveBeenCalledTimes(0)
+    })
+  })
+
+  describe('snapshots', () => {
+    it('Should be a default Button', () => {
+      const component = renderer.create(<Button />)
+      expect(component.toJSON()).toMatchSnapshot()
+    })
+
+    it('Should be an anchor button', () => {
+      const component = renderer.create(<Button el='a' href='https://github.com/couds/react-bulma-components' />)
+      expect(component.toJSON()).toMatchSnapshot()
     })
   })
 })
