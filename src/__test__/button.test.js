@@ -13,7 +13,7 @@ describe('Button', () => {
 
   it('Should render custom element', () => {
     const Link = props => (<a href='/home' {...props}>{props.children}</a>)
-    const wrapper = mount(<Button tag={Link}>Home</Button>)
+    const wrapper = mount(<Button renderAs={Link}>Home</Button>)
 
     expect(wrapper.find('a').hostNodes().length).toBe(1)
     expect(wrapper.text()).toBe('Home')
@@ -26,14 +26,14 @@ describe('Button', () => {
     expect(wrapper.text()).toBe('Home')
   })
 
-  it('Should render type as undefined by default when tag is "button"', () => {
+  it('Should render type as undefined by default when renderAs is "button"', () => {
     const wrapper = mount(<Button>Home</Button>)
 
     expect(wrapper.find('button').hostNodes().prop('type')).toBe(undefined)
     expect(wrapper.text()).toBe('Home')
   })
 
-  it('Should render type as "button" by default when tag is "button" and onClick is provided', () => {
+  it('Should render type as "button" by default when renderAs is "button" and onClick is provided', () => {
     const wrapper = mount(<Button onClick={() => {}}>Home</Button>)
 
     expect(wrapper.find('button').hostNodes().prop('type')).toBe('button')
@@ -47,8 +47,8 @@ describe('Button', () => {
     expect(wrapper.text()).toBe('Home')
   })
 
-  it('Should not render type by default when the type is not defined and the tag is not "button"', () => {
-    const wrapper = mount(<Button tag='a'>Home</Button>)
+  it('Should not render type by default when the type is not defined and the renderAs is not "button"', () => {
+    const wrapper = mount(<Button renderAs='a'>Home</Button>)
 
     expect(wrapper.find('a').hostNodes().prop('type')).toBe(undefined)
     expect(wrapper.text()).toBe('Home')

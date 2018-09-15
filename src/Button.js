@@ -18,11 +18,11 @@ const propTypes = {
   primary: PropTypes.bool,
   small: PropTypes.bool,
   success: PropTypes.bool,
-  tag: PropTypes.oneOfType([ PropTypes.func, PropTypes.string ])
+  renderAs: PropTypes.oneOfType([ PropTypes.func, PropTypes.string ])
 }
 
 const defaultProps = {
-  tag: 'button'
+  renderAs: 'button'
   // onClick: () => null
 }
 
@@ -30,7 +30,7 @@ export const Button = ({ children, ...props }) => {
   const {
     className,
     onClick,
-    tag,
+    renderAs,
 
     // styles
     primary,
@@ -76,21 +76,21 @@ export const Button = ({ children, ...props }) => {
     className
   )
 
-  let Tag = tag
+  let Element = renderAs
 
-  if (attributes.href && Tag === 'button') {
-    Tag = 'a'
+  if (attributes.href && Element === 'button') {
+    Element = 'a'
   }
 
   return (
-    <Tag
-      type={(Tag === 'button' && onClick) ? 'button' : undefined}
+    <Element
+      type={(Element === 'button' && onClick) ? 'button' : undefined}
       {...attributes}
       onClick={disabled ? undefined : onClick}
       className={classNames}
     >
       { children }
-    </Tag>
+    </Element>
   )
 }
 
