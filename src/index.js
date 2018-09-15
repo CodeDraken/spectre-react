@@ -1,7 +1,6 @@
-import Example from './Example'
-import Button from './Button'
+import { Button, ButtonGroup } from './Button'
 
 export {
-  Example,
-  Button
+  Button,
+  ButtonGroup
 }

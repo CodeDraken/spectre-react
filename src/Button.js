@@ -84,10 +84,10 @@ export const Button = ({ children, ...props }) => {
 
   return (
     <Tag
-      onClick={disabled ? undefined : onClick}
       type={(Tag === 'button' && onClick) ? 'button' : undefined}
-      className={classNames}
       {...attributes}
+      onClick={disabled ? undefined : onClick}
+      className={classNames}
     >
       { children }
     </Tag>
@@ -96,5 +96,21 @@ export const Button = ({ children, ...props }) => {
 
 Button.propTypes = propTypes
 Button.defaultProps = defaultProps
+
+export const ButtonGroup = ({ children, ...props }) => {
+  const { block, ...attributes } = props
+  const classNames = classnames('btn-group', { 'btn-group-block': block })
+
+  return (
+    <div {...attributes} className={classNames}>
+      { children }
+    </div>
+  )
+}
+
+ButtonGroup.propTypes = {
+  children: PropTypes.node,
+  block: PropTypes.bool
+}
 
 export default Button
