@@ -22,8 +22,8 @@ const propTypes = {
 }
 
 const defaultProps = {
-  tag: 'button',
-  onClick: () => null
+  tag: 'button'
+  // onClick: () => null
 }
 
 export const Button = ({ children, ...props }) => {
@@ -85,7 +85,7 @@ export const Button = ({ children, ...props }) => {
   return (
     <Tag
       onClick={disabled ? undefined : onClick}
-      type={(Tag === 'button' && attributes.onClick) ? 'button' : undefined}
+      type={(Tag === 'button' && onClick) ? 'button' : undefined}
       className={classNames}
       {...attributes}
     >
