@@ -7,6 +7,7 @@ lib
 .history
 npm-debug.log
 package-lock.json
+.cache
 
 # Logs
 logs
