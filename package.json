@@ -21,7 +21,8 @@
   },
   "scripts": {
     "prebuild": "babel -d lib src",
-    "build": "npm run prebuild && parcel build lib/index.js"
+    "build": "npm run prebuild && parcel build lib/index.js",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "keywords": [],
   "author": "",
@@ -31,8 +32,9 @@
     "react-dom": "^16.0.0"
   },
   "devDependencies": {
-    "babel": "^6.23.0",
+    "@storybook/react": "^3.4.10",
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^9.0.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",

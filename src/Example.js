@@ -3,7 +3,10 @@ import React, { Component } from 'react'
 class Example extends Component {
   render () {
     return (
-      <p>Example component</p>
+      <div>
+        <p>Example component</p>
+        <p>{this.props.children}</p>
+      </div>
     )
   }
 }
