@@ -6,13 +6,15 @@ const propTypes = {
   action: PropTypes.bool,
   active: PropTypes.bool,
   block: PropTypes.bool,
-  children: PropTypes.any,
+  children: PropTypes.node,
   circle: PropTypes.bool,
   className: PropTypes.string,
+  disabled: PropTypes.bool,
   error: PropTypes.bool,
   large: PropTypes.bool,
   link: PropTypes.bool,
   loading: PropTypes.bool,
+  onClick: PropTypes.func,
   primary: PropTypes.bool,
   small: PropTypes.bool,
   success: PropTypes.bool,
@@ -20,12 +22,15 @@ const propTypes = {
 }
 
 const defaultProps = {
-  tag: 'button'
+  tag: 'button',
+  onClick: () => null
 }
 
 export const Button = ({ children, ...props }) => {
   const {
     className,
+    onClick,
+    tag,
 
     // styles
     primary,
@@ -45,8 +50,8 @@ export const Button = ({ children, ...props }) => {
     // states
     active,
     loading,
+    disabled,
 
-    tag,
     ...attributes
   } = props
 
@@ -64,7 +69,8 @@ export const Button = ({ children, ...props }) => {
       'btn-action': action || circle,
       circle: circle,
       active: active,
-      loading: loading
+      loading: loading,
+      disabled: disabled
     },
 
     className
@@ -77,7 +83,12 @@ export const Button = ({ children, ...props }) => {
   }
 
   return (
-    <Tag {...attributes} className={classNames}>
+    <Tag
+      onClick={disabled ? undefined : onClick}
+      type={(Tag === 'button' && attributes.onClick) ? 'button' : undefined}
+      className={classNames}
+      {...attributes}
+    >
       { children }
     </Tag>
   )

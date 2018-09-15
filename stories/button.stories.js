@@ -21,6 +21,7 @@ storiesOf('Button', module)
 
       active={boolean('Active', false)}
       loading={boolean('Loading', false)}
+      disabled={boolean('Disabled', false)}
 
       href={text('href attribute', null)}
     >
