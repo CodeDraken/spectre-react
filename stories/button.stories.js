@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { boolean, select, text } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
-import { Button, ButtonGroup } from '../src'
+import { Button } from '../src'
 
 storiesOf('Button', module)
   .add('Default', () => (
@@ -31,11 +31,11 @@ storiesOf('Button', module)
     </Button>
   ))
   .add('Button Groups', () => (
-    <ButtonGroup block={boolean('Block', false)}>
+    <Button.Group block={boolean('Block', false)}>
       <Button>Button 1</Button>
       <Button>Button 2</Button>
       <Button>Button 3</Button>
-    </ButtonGroup>
+    </Button.Group>
   ))
   .add('As another React element', () => {
     const CustomComponent = ({

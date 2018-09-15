@@ -94,10 +94,7 @@ export const Button = ({ children, ...props }) => {
   )
 }
 
-Button.propTypes = propTypes
-Button.defaultProps = defaultProps
-
-export const ButtonGroup = ({ children, ...props }) => {
+export const Group = ({ children, ...props }) => {
   const { block, ...attributes } = props
   const classNames = classnames('btn-group', { 'btn-group-block': block })
 
@@ -108,9 +105,14 @@ export const ButtonGroup = ({ children, ...props }) => {
   )
 }
 
-ButtonGroup.propTypes = {
+Group.propTypes = {
   children: PropTypes.node,
   block: PropTypes.bool
 }
+
+Button.propTypes = propTypes
+Button.defaultProps = defaultProps
+
+Button.Group = Group
 
 export default Button
