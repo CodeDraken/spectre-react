@@ -1,5 +1,7 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
+import renderer from 'react-test-renderer'
+
 import { Button } from '..'
 
 describe('Button', () => {
@@ -57,5 +59,35 @@ describe('Button', () => {
 
     expect(wrapper.find('a').hostNodes().prop('type')).toBe(undefined)
     expect(wrapper.text()).toBe('Home')
+  })
+
+  describe('snapshots', () => {
+    it('Should be a default Button', () => {
+      const component = renderer.create(<Button />)
+      expect(component.toJSON()).toMatchSnapshot()
+    })
+
+    it('Should be an anchor button', () => {
+      const component = renderer.create(<Button renderAs='a' href='https://github.com/couds/react-bulma-components' />)
+      expect(component.toJSON()).toMatchSnapshot()
+    })
+  })
+
+  describe('onClick', () => {
+    it('calls props.onClick if it exists', () => {
+      const onClick = jest.fn()
+      const wrapper = mount(<Button onClick={onClick}>Testing Click</Button>)
+
+      wrapper.find('button').hostNodes().simulate('click')
+      expect(onClick).toHaveBeenCalled()
+    })
+
+    it('is not called when disabled', () => {
+      const onClick = jest.fn()
+      const wrapper = shallow(<Button disabled onClick={onClick} />)
+
+      wrapper.simulate('click')
+      expect(onClick).toHaveBeenCalledTimes(0)
+    })
   })
 })

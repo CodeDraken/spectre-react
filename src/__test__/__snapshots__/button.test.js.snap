@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button snapshots Should be a default Button 1`] = `
+<button
+  className="btn"
+/>
+`;
+
+exports[`Button snapshots Should be an anchor button 1`] = `
+<a
+  className="btn"
+  href="https://github.com/couds/react-bulma-components"
+  renderAs="a"
+/>
+`;
