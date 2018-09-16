@@ -2,7 +2,7 @@
   "name": "spectre-react",
   "version": "0.0.1",
   "description": "React bindings for Spectre.css",
-  "main": "src/index.js",
+  "main": "dist",
   "standard": {
     "globals": [
       "$",
