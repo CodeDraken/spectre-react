@@ -51,9 +51,9 @@ storiesOf('Button', module)
     return (
       <div>
         <Button
-          tag={CustomComponent}
+          renderAs={CustomComponent}
           primary
-          customProp='github.com'>
+          customProp='https://www.github.com'>
             Button rendered using another React Component with props
         </Button>
       </div>
