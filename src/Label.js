@@ -9,6 +9,7 @@ const propTypes = {
   className: PropTypes.string,
   color: PropTypes.oneOf(colors),
   rounded: PropTypes.bool,
+  form: PropTypes.bool,
   for: PropTypes.string,
   renderAs: PropTypes.oneOfType([ PropTypes.func, PropTypes.string ])
 }
@@ -19,6 +20,7 @@ const defaultProps = {
   renderAs: 'span',
   color: null,
   rounded: false,
+  form: false,
   for: ''
 }
 
@@ -30,16 +32,17 @@ export const Label = ({ children, ...props }) => {
     className,
     renderAs,
     for: htmlFor,
+    form,
 
     ...attributes
   } = props
 
   const classNames = classnames(
-    'label',
-
     {
       [`label-${color}`]: color,
-      'label-rounded': rounded
+      'label-rounded': rounded,
+      'form-label': form,
+      'label': !form
     },
 
     className
@@ -52,7 +55,11 @@ export const Label = ({ children, ...props }) => {
   }
 
   return (
-    <Element {...attributes} className={classNames}>
+    <Element
+      {...attributes}
+      className={classNames}
+      htmlFor={htmlFor}
+    >
       { children }
     </Element>
   )

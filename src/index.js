@@ -8,6 +8,7 @@ import { Input } from './Input'
 import { Col } from './Col'
 import { Row } from './Row'
 import { Container } from './Container'
+import { Label } from './Label'
 
 export {
   Button,
@@ -20,5 +21,6 @@ export {
   Icon,
   Col,
   Row,
-  Container
+  Container,
+  Label
 }
