@@ -72,7 +72,6 @@ export const Input = ({ children, ...props }) => {
         <div class={`has-icon-${iconLeft || iconRight}`}>
           { input }
           { children }
-          <i class='form-icon icon icon-check' />
         </div>
       )
       : input
