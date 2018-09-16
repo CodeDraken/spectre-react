@@ -15,8 +15,8 @@ const propTypes = {
   lg: PropTypes.oneOf(sizes),
   xl: PropTypes.oneOf(sizes),
   all: PropTypes.oneOf(sizes),
-  hide: PropTypes.array(PropTypes.oneOf(media)),
-  show: PropTypes.array(PropTypes.oneOf(media)),
+  hide: PropTypes.arrayOf(PropTypes.oneOf(media)),
+  show: PropTypes.arrayOf(PropTypes.oneOf(media)),
   offset: PropTypes.oneOf(offsets)
 }
 

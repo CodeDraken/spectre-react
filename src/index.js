@@ -4,7 +4,10 @@ import { Blockquote } from './Blockquote'
 import { Table } from './Table'
 import { Icon } from './Icon'
 import { FormGroup } from './FormGroup'
-import Input from './Input'
+import { Input } from './Input'
+import { Col } from './Col'
+import { Row } from './Row'
+import { Container } from './Container'
 
 export {
   Button,
@@ -14,5 +17,8 @@ export {
   Table,
   Input,
   FormGroup,
-  Icon
+  Icon,
+  Col,
+  Row,
+  Container
 }
