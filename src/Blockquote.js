@@ -1,3 +1,6 @@
+// TODO: Remove this component and related files
+// it was added on accident
+
 import React from 'react'
 import PropTypes from 'prop-types'
 
