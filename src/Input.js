@@ -10,7 +10,6 @@ const propTypes = {
     'color', 'file', 'date'
   ]),
   placeholder: PropTypes.string,
-  value: PropTypes.string,
   small: PropTypes.bool,
   large: PropTypes.bool,
   iconLeft: PropTypes.bool,
@@ -20,7 +19,6 @@ const propTypes = {
 const defaultProps = {
   className: '',
   type: 'text',
-  value: '',
   name: null,
   placeholder: '',
   large: false,
@@ -66,10 +64,12 @@ export const Input = ({ children, ...props }) => {
     />
   )
 
+  const iconPosition = iconLeft ? 'left' : 'right'
+
   return (
     iconLeft || iconRight
       ? (
-        <div class={`has-icon-${iconLeft || iconRight}`}>
+        <div className={`has-icon-${iconPosition}`}>
           { input }
           { children }
         </div>

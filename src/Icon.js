@@ -5,23 +5,26 @@ import classnames from 'classnames'
 const propTypes = {
   className: PropTypes.string,
   icon: PropTypes.string,
-  size: PropTypes.oneOf(['2x', '3x', '4x'])
+  size: PropTypes.oneOf(['2x', '3x', '4x']),
+  formIcon: PropTypes.bool
 }
 
 const defaultProps = {
   className: '',
   icon: null,
-  size: null
+  size: null,
+  formIcon: false
 }
 
 export const Icon = ({ children, ...props }) => {
-  const { className, icon, size, ...attributes } = props
+  const { className, formIcon, icon, size, ...attributes } = props
 
   const classNames = classnames(
     'icon',
     `icon-${icon}`,
     {
-      [`icon-${size}`]: size
+      [`icon-${size}`]: size,
+      'form-icon': formIcon
     }
   )
 
