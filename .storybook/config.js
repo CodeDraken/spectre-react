@@ -8,8 +8,8 @@ import backgrounds from '@storybook/addon-backgrounds';
 // addDecorator(withInfo())
 
 setOptions({
-  name: 'React Spectre Components',
-  url: 'url',
+  name: 'Spectre React Components',
+  url: 'https://github.com/Hackbit/reactriot2018-codedraken',
   showAddonPanel: true,
 })
 
