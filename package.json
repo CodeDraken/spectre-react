@@ -23,6 +23,7 @@
     "prebuild": "babel -d lib src",
     "build": "npm run prebuild && parcel build lib/index.js",
     "storybook": "start-storybook -p 6006 -c .storybook",
+    "deploy-storybook": "storybook-to-ghpages",
     "test": "jest"
   },
   "keywords": [],
@@ -52,6 +53,7 @@
     "@storybook/core-events": "^4.0.0-alpha.11",
     "@storybook/node-logger": "^3.4.10",
     "@storybook/react": "^3.4.10",
+    "@storybook/storybook-deployer": "^2.3.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^9.0.0",
