@@ -1,6 +1,8 @@
 
 # React Spectre
 
+[![Build Status](https://travis-ci.com/CodeDraken/spectre-react.svg?branch=master)](https://travis-ci.com/CodeDraken/spectre-react)
+
 React components for the [Spectre CSS library](https://picturepan2.github.io/spectre/index.html).
 
 This project was started during the React Riot Hackathon. It's not fully complete, you can view the components in a Storybook. ( see link below )
