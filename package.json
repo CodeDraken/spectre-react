@@ -4,18 +4,12 @@
   "description": "React bindings for Spectre.css",
   "main": "dist",
   "standard": {
-    "globals": [
-      "$",
-      "jQuery",
-      "fetch"
-    ],
     "ignore": [
       "node_modules/**"
     ],
     "parser": "babel-eslint",
     "envs": [
       "jest",
-      "mocha",
       "node"
     ]
   },
@@ -24,7 +18,9 @@
     "build": "npm run prebuild && parcel build lib/index.js",
     "storybook": "start-storybook -p 6006 -c .storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "test": "jest"
+    "test": "jest",
+    "lint": "standard 'src/**/*.js!(*.snap)'",
+    "lint-fix": "standard 'src/**/*.js!(*.snap)' --fix"
   },
   "keywords": [],
   "author": "",
