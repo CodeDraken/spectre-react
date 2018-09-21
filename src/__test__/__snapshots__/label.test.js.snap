@@ -3,7 +3,7 @@
 exports[`Label Snapshots Should concat classnames in props with Spectre classnames 1`] = `
 <span
   className="label other-class this-is-a-test"
-  htmlFor=""
+  htmlFor={null}
 >
   classes
 </span>
@@ -14,7 +14,7 @@ exports[`Label Snapshots Should exist 1`] = `[Function]`;
 exports[`Label Snapshots Should have label classname 1`] = `
 <span
   className="label"
-  htmlFor=""
+  htmlFor={null}
 >
   Test
 </span>
@@ -23,7 +23,7 @@ exports[`Label Snapshots Should have label classname 1`] = `
 exports[`Label Snapshots Should use inline styles 1`] = `
 <span
   className="label"
-  htmlFor=""
+  htmlFor={null}
   style={
     Object {
       "width": 250,
