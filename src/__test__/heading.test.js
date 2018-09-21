@@ -40,7 +40,7 @@ describe('Heading', () => {
       expect(Heading).toMatchSnapshot()
     })
 
-    it('Should concat classname in props with Bulma classname', () => {
+    it('Should concat classname in props with Spectre classname', () => {
       const wrapper = renderer.create(
         <Heading className='other-class this-is-a-test'>test</Heading>
       )
