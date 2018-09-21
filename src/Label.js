@@ -21,7 +21,7 @@ const defaultProps = {
   color: null,
   rounded: false,
   form: false,
-  for: ''
+  for: null
 }
 
 export const Label = ({ children, ...props }) => {

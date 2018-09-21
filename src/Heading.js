@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
+import { Label } from '.'
+
 const propTypes = {
   renderAs: PropTypes.oneOfType([ PropTypes.string, PropTypes.func ]),
   children: PropTypes.node,
@@ -26,26 +28,26 @@ export const Heading = ({ children, ...props }) => {
 
   return (
     <Element {...attributes}>
-      { children } { label && <Label> { label }</Label> }
+      { children } { label && <Label renderAs='small'> { label }</Label> }
     </Element>
   )
 }
 
-export const Label = ({ children, ...props }) => {
-  const { className, ...attributes } = props
-  const classNames = classnames('label', className)
+// export const Label = ({ children, ...props }) => {
+//   const { className, ...attributes } = props
+//   const classNames = classnames('label', className)
 
-  return (
-    <small {...attributes} className={classNames}>
-      { children }
-    </small>
-  )
-}
+//   return (
+//     <small {...attributes} className={classNames}>
+//       { children }
+//     </small>
+//   )
+// }
 
-Label.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string
-}
+// Label.propTypes = {
+//   children: PropTypes.node,
+//   className: PropTypes.string
+// }
 
 Heading.propTypes = propTypes
 
