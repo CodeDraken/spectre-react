@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow, mount } from 'enzyme'
 import renderer from 'react-test-renderer'
 
-import { Heading, Label } from '../'
+import { Heading } from '../'
 
 describe('Heading', () => {
   it('Should render an h1 tag by default', () => {
