@@ -22,7 +22,7 @@ const propTypes = {
 
 const defaultProps = {
   children: null,
-  className: '',
+  className: null,
   hide: [],
   show: []
 }

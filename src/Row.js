@@ -11,7 +11,7 @@ const propTypes = {
 
 const defaultProps = {
   children: null,
-  className: '',
+  className: null,
   gapless: false,
   oneline: false
 }

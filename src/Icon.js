@@ -10,7 +10,7 @@ const propTypes = {
 }
 
 const defaultProps = {
-  className: '',
+  className: null,
   icon: null,
   size: null,
   formIcon: false

@@ -5,7 +5,6 @@ exports[`Heading Snapshots Should concat classname in props with Bulma classname
   className="other-class this-is-a-test"
 >
   test
-  
 </h1>
 `;
 
@@ -13,7 +12,7 @@ exports[`Heading Snapshots Should exist 1`] = `[Function]`;
 
 exports[`Heading Snapshots Should render a label 1`] = `
 <h1
-  className=""
+  className={null}
 >
   Test
   <small
@@ -28,7 +27,7 @@ exports[`Heading Snapshots Should render a label 1`] = `
 
 exports[`Heading Snapshots Should use inline styles 1`] = `
 <h1
-  className=""
+  className={null}
   style={
     Object {
       "width": 250,
@@ -36,6 +35,5 @@ exports[`Heading Snapshots Should use inline styles 1`] = `
   }
 >
   Test
-  
 </h1>
 `;

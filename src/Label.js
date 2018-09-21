@@ -16,7 +16,7 @@ const propTypes = {
 
 const defaultProps = {
   children: null,
-  className: '',
+  className: null,
   renderAs: 'span',
   color: null,
   rounded: false,

@@ -17,10 +17,10 @@ const propTypes = {
 }
 
 const defaultProps = {
-  className: '',
+  className: null,
   type: 'text',
   name: null,
-  placeholder: '',
+  placeholder: null,
   large: false,
   small: false,
   iconLeft: false,

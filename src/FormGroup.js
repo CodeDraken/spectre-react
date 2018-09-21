@@ -9,7 +9,7 @@ const propTypes = {
 
 const defaultProps = {
   children: null,
-  className: ''
+  className: null
 }
 
 export const FormGroup = ({ children, ...props }) => {

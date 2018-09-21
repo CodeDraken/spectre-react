@@ -12,8 +12,8 @@ const propTypes = {
 
 const defaultProps = {
   renderAs: 'h1',
-  className: '',
-  label: '',
+  className: null,
+  label: null,
   children: null
 }
 
