@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
 
 import { Label } from '.'
 
@@ -28,7 +27,7 @@ export const Heading = ({ children, ...props }) => {
 
   return (
     <Element {...attributes}>
-      { children } { label && <Label renderAs='small'> { label }</Label> }
+      { children }{ label && <Label renderAs='small'> { label }</Label> }
     </Element>
   )
 }
