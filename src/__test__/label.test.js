@@ -65,24 +65,24 @@ describe('Label', () => {
     })
 
     it('Should have label classname', () => {
-      const component = renderer.create(<Label>Test</Label>)
+      const wrapper = renderer.create(<Label>Test</Label>)
 
-      expect(component.toJSON()).toMatchSnapshot()
+      expect(wrapper.toJSON()).toMatchSnapshot()
     })
 
     it('Should concat classnames in props with Spectre classnames', () => {
-      const component = renderer.create(
+      const wrapper = renderer.create(
         <Label className='other-class this-is-a-test'>classes</Label>
       )
 
-      expect(component.toJSON()).toMatchSnapshot()
+      expect(wrapper.toJSON()).toMatchSnapshot()
     })
 
     it('Should use inline styles', () => {
-      const component = renderer.create(
+      const wrapper = renderer.create(
         <Label style={{ width: 250 }}>Inline styles</Label>)
 
-      expect(component.toJSON()).toMatchSnapshot()
+      expect(wrapper.toJSON()).toMatchSnapshot()
     })
   })
 })

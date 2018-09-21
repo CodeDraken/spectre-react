@@ -1,14 +1,20 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import renderer from 'react-test-renderer'
 
-import { Heading } from '../'
+import { Heading, Label } from '../'
 
 describe('Heading', () => {
   it('Should render an h1 tag by default', () => {
     const wrapper = shallow(<Heading />)
 
     expect(wrapper.type()).toBe('h1')
+  })
+
+  it('Should render with a label', () => {
+    const wrapper = mount(<Heading label='my label' />)
+
+    expect(wrapper.find('small.label')).toHaveLength(1)
   })
 
   it('Should render children', () => {
@@ -35,27 +41,27 @@ describe('Heading', () => {
     })
 
     it('Should concat classname in props with Bulma classname', () => {
-      const component = renderer.create(
+      const wrapper = renderer.create(
         <Heading className='other-class this-is-a-test'>test</Heading>
       )
 
-      expect(component.toJSON()).toMatchSnapshot()
+      expect(wrapper.toJSON()).toMatchSnapshot()
     })
 
     it('Should use inline styles', () => {
-      const component = renderer.create(
+      const wrapper = renderer.create(
         <Heading style={{ width: 250 }}>Test</Heading>
       )
 
-      expect(component.toJSON()).toMatchSnapshot()
+      expect(wrapper.toJSON()).toMatchSnapshot()
     })
 
     it('Should render a label', () => {
-      const component = renderer.create(
+      const wrapper = renderer.create(
         <Heading label='a label'>Test</Heading>
       )
 
-      expect(component.toJSON()).toMatchSnapshot()
+      expect(wrapper.toJSON()).toMatchSnapshot()
     })
   })
 })

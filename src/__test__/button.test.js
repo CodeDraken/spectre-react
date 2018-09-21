@@ -81,13 +81,15 @@ describe('Button', () => {
 
   describe('snapshots', () => {
     it('Should be a default Button', () => {
-      const component = renderer.create(<Button />)
-      expect(component.toJSON()).toMatchSnapshot()
+      const wrapper = renderer.create(<Button />)
+
+      expect(wrapper.toJSON()).toMatchSnapshot()
     })
 
     it('Should be an anchor button', () => {
-      const component = renderer.create(<Button el='a' href='https://github.com/couds/react-bulma-components' />)
-      expect(component.toJSON()).toMatchSnapshot()
+      const wrapper = renderer.create(<Button el='a' href='#' />)
+
+      expect(wrapper.toJSON()).toMatchSnapshot()
     })
   })
 })
