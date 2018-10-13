@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Container Snapshots Should exist 1`] = `
+exports[`Container Should match the snapshot 1`] = `
 <div
   className="container"
 />

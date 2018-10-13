@@ -5,19 +5,22 @@ import classnames from 'classnames'
 const propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl'])
+  size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
+  renderAs: PropTypes.oneOfType([ PropTypes.func, PropTypes.string ])
 }
 
 const defaultProps = {
   children: null,
   className: null,
-  size: null
+  size: null,
+  renderAs: 'div'
 }
 
 export const Container = ({ children, ...props }) => {
   const {
     className,
     size,
+    renderAs: Element,
 
     ...attributes
   } = props
@@ -31,9 +34,9 @@ export const Container = ({ children, ...props }) => {
   )
 
   return (
-    <div {...attributes} className={classNames}>
+    <Element {...attributes} className={classNames}>
       { children }
-    </div>
+    </Element>
   )
 }
 
