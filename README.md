@@ -15,7 +15,7 @@ View the components on the [GitHub Page](https://codedraken.github.io/spectre-re
 2. Make a new branch name it something like `add-{ComponentName}`
 3. Run `npm install`
 4. Make your changes following the [Standard JS style](https://standardjs.com/) ( run `npm run lint` and `npm run lint-fix` if you don't want to install Standard )
-5. Make sure all tests pass and there are no issues when you run `npm run lint`
+5. Make sure all tests pass `npm test` and there are no issues when you run `npm run lint`
 
 ### Commands
 
