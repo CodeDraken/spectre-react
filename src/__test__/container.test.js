@@ -29,6 +29,46 @@ describe('Container', () => {
     expect(wrapper.hasClass('container')).toBe(true)
   })
 
+  it('Should render the xs size', () => {
+    const wrapper = shallow(<Container className='extra' size='xs' />)
+
+    expect(wrapper.hasClass('extra')).toBe(true)
+    expect(wrapper.hasClass('container')).toBe(true)
+    expect(wrapper.hasClass('grid-xs')).toBe(true)
+  })
+
+  it('Should render the sm size', () => {
+    const wrapper = shallow(<Container className='extra' size='sm' />)
+
+    expect(wrapper.hasClass('extra')).toBe(true)
+    expect(wrapper.hasClass('container')).toBe(true)
+    expect(wrapper.hasClass('grid-sm')).toBe(true)
+  })
+
+  it('Should render the md size', () => {
+    const wrapper = shallow(<Container className='extra' size='md' />)
+
+    expect(wrapper.hasClass('extra')).toBe(true)
+    expect(wrapper.hasClass('container')).toBe(true)
+    expect(wrapper.hasClass('grid-md')).toBe(true)
+  })
+
+  it('Should render the lg size', () => {
+    const wrapper = shallow(<Container className='extra' size='lg' />)
+
+    expect(wrapper.hasClass('extra')).toBe(true)
+    expect(wrapper.hasClass('container')).toBe(true)
+    expect(wrapper.hasClass('grid-lg')).toBe(true)
+  })
+
+  it('Should render the xl size', () => {
+    const wrapper = shallow(<Container className='extra' size='xl' />)
+
+    expect(wrapper.hasClass('extra')).toBe(true)
+    expect(wrapper.hasClass('container')).toBe(true)
+    expect(wrapper.hasClass('grid-xl')).toBe(true)
+  })
+
   it('Should render as a custom element', () => {
     const wrapper = shallow(<Container renderAs='main'>custom</Container>)
 
