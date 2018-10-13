@@ -17,14 +17,16 @@ const propTypes = {
   all: PropTypes.oneOf(sizes),
   hide: PropTypes.arrayOf(PropTypes.oneOf(media)),
   show: PropTypes.arrayOf(PropTypes.oneOf(media)),
-  offset: PropTypes.oneOf(offsets)
+  offset: PropTypes.oneOf(offsets),
+  renderAs: PropTypes.oneOfType([ PropTypes.func, PropTypes.string ])
 }
 
 const defaultProps = {
   children: null,
   className: null,
   hide: [],
-  show: []
+  show: [],
+  renderAs: 'div'
 }
 
 export const Col = ({ children, ...props }) => {
@@ -39,6 +41,8 @@ export const Col = ({ children, ...props }) => {
     hide,
     show,
     offset,
+    renderAs: Element,
+
     ...attributes
   } = props
 
@@ -64,9 +68,9 @@ export const Col = ({ children, ...props }) => {
   )
 
   return (
-    <div {...attributes} className={classNames}>
+    <Element {...attributes} className={classNames}>
       {children}
-    </div>
+    </Element>
   )
 }
 

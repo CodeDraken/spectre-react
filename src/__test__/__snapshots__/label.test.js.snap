@@ -1,35 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Label Snapshots Should concat classnames in props with Spectre classnames 1`] = `
-<span
-  className="label other-class this-is-a-test"
-  htmlFor={null}
->
-  classes
-</span>
-`;
-
-exports[`Label Snapshots Should exist 1`] = `[Function]`;
-
-exports[`Label Snapshots Should have label classname 1`] = `
+exports[`Label Should match the snapshot 1`] = `
 <span
   className="label"
   htmlFor={null}
->
-  Test
-</span>
-`;
-
-exports[`Label Snapshots Should use inline styles 1`] = `
-<span
-  className="label"
-  htmlFor={null}
-  style={
-    Object {
-      "width": 250,
-    }
-  }
->
-  Inline styles
-</span>
+/>
 `;

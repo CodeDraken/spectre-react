@@ -1,6 +1,5 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import renderer from 'react-test-renderer'
 
 import { Label } from '../'
 
@@ -59,30 +58,30 @@ describe('Label', () => {
     expect(wrapper.type()).toBe('main')
   })
 
-  describe('Snapshots', () => {
-    it('Should exist', () => {
-      expect(Label).toMatchSnapshot()
-    })
+  it('Should match the snapshot', () => {
+    const wrapper = shallow(<Label />)
 
-    it('Should have label classname', () => {
-      const wrapper = renderer.create(<Label>Test</Label>)
-
-      expect(wrapper.toJSON()).toMatchSnapshot()
-    })
-
-    it('Should concat classnames in props with Spectre classnames', () => {
-      const wrapper = renderer.create(
-        <Label className='other-class this-is-a-test'>classes</Label>
-      )
-
-      expect(wrapper.toJSON()).toMatchSnapshot()
-    })
-
-    it('Should use inline styles', () => {
-      const wrapper = renderer.create(
-        <Label style={{ width: 250 }}>Inline styles</Label>)
-
-      expect(wrapper.toJSON()).toMatchSnapshot()
-    })
+    expect(wrapper).toMatchSnapshot()
   })
+
+  // it('Should have label classname', () => {
+  //   const wrapper = renderer.create(<Label>Test</Label>)
+
+  //   expect(wrapper.toJSON()).toMatchSnapshot()
+  // })
+
+  // it('Should concat classnames in props with Spectre classnames', () => {
+  //   const wrapper = renderer.create(
+  //     <Label className='other-class this-is-a-test'>classes</Label>
+  //   )
+
+  //   expect(wrapper.toJSON()).toMatchSnapshot()
+  // })
+
+  // it('Should use inline styles', () => {
+  //   const wrapper = renderer.create(
+  //     <Label style={{ width: 250 }}>Inline styles</Label>)
+
+  //   expect(wrapper.toJSON()).toMatchSnapshot()
+  // })
 })

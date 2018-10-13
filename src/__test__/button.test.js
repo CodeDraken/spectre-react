@@ -1,6 +1,5 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-import renderer from 'react-test-renderer'
 
 import { Button } from '..'
 
@@ -79,17 +78,23 @@ describe('Button', () => {
     })
   })
 
-  describe('snapshots', () => {
-    it('Should be a default Button', () => {
-      const wrapper = renderer.create(<Button />)
+  it('Should match the snapshot', () => {
+    const wrapper = shallow(<Button />)
 
-      expect(wrapper.toJSON()).toMatchSnapshot()
-    })
-
-    it('Should be an anchor button', () => {
-      const wrapper = renderer.create(<Button el='a' href='#' />)
-
-      expect(wrapper.toJSON()).toMatchSnapshot()
-    })
+    expect(wrapper).toMatchSnapshot()
   })
+
+  // describe('snapshots', () => {
+  // it('Should be a default Button', () => {
+  //   const wrapper = renderer.create(<Button />)
+
+  //   expect(wrapper.toJSON()).toMatchSnapshot()
+  // })
+
+  // it('Should be an anchor button', () => {
+  //   const wrapper = renderer.create(<Button el='a' href='#' />)
+
+  //   expect(wrapper.toJSON()).toMatchSnapshot()
+  // })
+  // })
 })
