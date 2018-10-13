@@ -6,18 +6,27 @@ const propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   gapless: PropTypes.bool,
-  oneline: PropTypes.bool
+  oneline: PropTypes.bool,
+  renderAs: PropTypes.oneOfType([ PropTypes.string, PropTypes.func ])
 }
 
 const defaultProps = {
   children: null,
   className: null,
   gapless: false,
-  oneline: false
+  oneline: false,
+  renderAs: 'div'
 }
 
 export const Row = ({ children, ...props }) => {
-  const { className, gapless, oneline, ...attributes } = props
+  const {
+    className,
+    gapless,
+    oneline,
+    renderAs: Element,
+
+    ...attributes
+  } = props
 
   const classNames = classnames(
     'columns',
@@ -30,9 +39,9 @@ export const Row = ({ children, ...props }) => {
   )
 
   return (
-    <div {...attributes} className={classNames}>
+    <Element {...attributes} className={classNames}>
       { children }
-    </div>
+    </Element>
   )
 }
 
