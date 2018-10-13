@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+import { shallow, render } from 'enzyme'
 import renderer from 'react-test-renderer'
 
 import { Container } from '../'
@@ -13,7 +13,9 @@ describe('Container', () => {
 
   describe('Snapshots', () => {
     it('Should exist', () => {
-      expect(shallow(<Container />)).toMatchSnapshot()
+      const wrapper = shallow(<Container />)
+
+      expect(wrapper).toMatchSnapshot()
     })
   })
 })

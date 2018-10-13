@@ -1,6 +1,5 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-import renderer from 'react-test-renderer'
 
 import { Heading } from '../'
 
@@ -14,7 +13,7 @@ describe('Heading', () => {
   it('Should render with a label', () => {
     const wrapper = mount(<Heading label='my label' />)
 
-    expect(wrapper.find('small.label')).toHaveLength(1)
+    expect(wrapper.find('Label')).toHaveLength(1)
   })
 
   it('Should render children', () => {
@@ -35,33 +34,33 @@ describe('Heading', () => {
     expect(wrapper.type()).toBe('main')
   })
 
-  describe('Snapshots', () => {
-    it('Should exist', () => {
-      expect(Heading).toMatchSnapshot()
-    })
+  it('Should match the snapshot', () => {
+    const wrapper = shallow(<Heading />)
 
-    it('Should concat classname in props with Spectre classname', () => {
-      const wrapper = renderer.create(
-        <Heading className='other-class this-is-a-test'>test</Heading>
-      )
-
-      expect(wrapper.toJSON()).toMatchSnapshot()
-    })
-
-    it('Should use inline styles', () => {
-      const wrapper = renderer.create(
-        <Heading style={{ width: 250 }}>Test</Heading>
-      )
-
-      expect(wrapper.toJSON()).toMatchSnapshot()
-    })
-
-    it('Should render a label', () => {
-      const wrapper = renderer.create(
-        <Heading label='a label'>Test</Heading>
-      )
-
-      expect(wrapper.toJSON()).toMatchSnapshot()
-    })
+    expect(wrapper).toMatchSnapshot()
   })
+
+  // it('Should concat classname in props with Spectre classname', () => {
+  //   const wrapper = shallow(
+  //     <Heading className='other-class this-is-a-test'>test</Heading>
+  //   )
+
+  //   expect(wrapper).toMatchSnapshot()
+  // })
+
+  // it('Should use inline styles', () => {
+  //   const wrapper = shallow(
+  //     <Heading style={{ width: 250 }}>Test</Heading>
+  //   )
+
+  //   expect(wrapper).toMatchSnapshot()
+  // })
+
+  // it('Should render a label', () => {
+  //   const wrapper = shallow(
+  //     <Heading label='a label'>Test</Heading>
+  //   )
+
+  //   expect(wrapper).toMatchSnapshot()
+  // })
 })

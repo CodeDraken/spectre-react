@@ -1,39 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Heading Snapshots Should concat classname in props with Spectre classname 1`] = `
-<h1
-  className="other-class this-is-a-test"
->
-  test
-</h1>
-`;
-
-exports[`Heading Snapshots Should exist 1`] = `[Function]`;
-
-exports[`Heading Snapshots Should render a label 1`] = `
+exports[`Heading Should match the snapshot 1`] = `
 <h1
   className={null}
->
-  Test
-  <small
-    className="label"
-    htmlFor={null}
-  >
-     
-    a label
-  </small>
-</h1>
-`;
-
-exports[`Heading Snapshots Should use inline styles 1`] = `
-<h1
-  className={null}
-  style={
-    Object {
-      "width": 250,
-    }
-  }
->
-  Test
-</h1>
+/>
 `;
