@@ -1,6 +1,5 @@
 import React from 'react'
-import { shallow, render } from 'enzyme'
-import renderer from 'react-test-renderer'
+import { shallow } from 'enzyme'
 
 import { Container } from '../'
 
