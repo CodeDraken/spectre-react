@@ -4,7 +4,7 @@ import { shallow } from 'enzyme'
 import { Col } from '../'
 
 describe('Col', () => {
-  it('Should render default .container markup', () => {
+  it('Should render default .column markup', () => {
     const wrapper = shallow(<Col />)
 
     expect(wrapper.html()).toBe('<div class="column"></div>')
