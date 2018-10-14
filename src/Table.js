@@ -7,7 +7,8 @@ const propTypes = {
   className: PropTypes.string,
   striped: PropTypes.bool,
   hover: PropTypes.bool,
-  scroll: PropTypes.bool
+  scroll: PropTypes.bool,
+  renderAs: PropTypes.oneOfType([ PropTypes.string, PropTypes.func ])
 }
 
 const defaultProps = {
@@ -15,7 +16,8 @@ const defaultProps = {
   children: null,
   striped: false,
   hover: false,
-  scroll: false
+  scroll: false,
+  renderAs: 'table'
 }
 
 export const Table = ({ children, ...props }) => {
@@ -24,6 +26,7 @@ export const Table = ({ children, ...props }) => {
     striped,
     hover,
     scroll,
+    renderAs: Element,
 
     ...attributes
   } = props
@@ -39,9 +42,9 @@ export const Table = ({ children, ...props }) => {
   )
 
   return (
-    <table {...attributes} className={classNames}>
+    <Element {...attributes} className={classNames}>
       { children }
-    </table>
+    </Element>
   )
 }
 
