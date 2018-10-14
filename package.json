@@ -18,7 +18,8 @@
     "build": "npm run prebuild && parcel build lib/index.js",
     "storybook": "start-storybook -p 6006 -c .storybook",
     "storybook-deploy": "storybook-to-ghpages",
-    "test": "jest --watch",
+    "test": "jest",
+    "test-watch": "jest --watch",
     "lint": "standard 'src/**/*.js!(*.snap)'",
     "lint-fix": "standard 'src/**/*.js!(*.snap)' --fix"
   },
