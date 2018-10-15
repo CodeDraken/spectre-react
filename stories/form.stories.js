@@ -24,7 +24,7 @@ storiesOf('Forms', module)
             </FormGroup>
 
             <FormGroup>
-              <Label form for='input-example-3'>Password</Label>
+              <Label form for='input-example-3'>Email</Label>
               <Input id='input-example-3' type='email' placeholder='email'
                 iconLeft={boolean('iconLeft', true)}
                 iconRight={boolean('iconRight', false)}

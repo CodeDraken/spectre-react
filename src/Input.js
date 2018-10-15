@@ -13,7 +13,8 @@ const propTypes = {
   small: PropTypes.bool,
   large: PropTypes.bool,
   iconLeft: PropTypes.bool,
-  iconRight: PropTypes.bool
+  iconRight: PropTypes.bool,
+  renderAs: PropTypes.oneOfType([ PropTypes.string, PropTypes.func ])
 }
 
 const defaultProps = {
@@ -24,7 +25,8 @@ const defaultProps = {
   large: false,
   small: false,
   iconLeft: false,
-  iconRight: false
+  iconRight: false,
+  renderAs: 'input'
 }
 
 export const Input = ({ children, ...props }) => {
@@ -38,6 +40,7 @@ export const Input = ({ children, ...props }) => {
     large,
     iconRight,
     iconLeft,
+    renderAs: Element,
 
     ...attributes
   } = props
@@ -54,7 +57,7 @@ export const Input = ({ children, ...props }) => {
   )
 
   const input = (
-    <input
+    <Element
       {...attributes}
       name={name}
       value={value}
