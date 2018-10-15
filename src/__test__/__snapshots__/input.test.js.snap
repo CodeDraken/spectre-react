@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Should match the default snapshot 1`] = `
+<input
+  className="form-input"
+  type="text"
+/>
+`;
+
+exports[`Input Should match the snapshot with icons 1`] = `
+<div
+  className="has-icon-right"
+>
+  <input
+    className="form-input"
+    type="text"
+  />
+  <i />
+</div>
+`;

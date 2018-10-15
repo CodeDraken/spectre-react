@@ -4,22 +4,24 @@ import classnames from 'classnames'
 
 const propTypes = {
   children: PropTypes.node,
-  className: PropTypes.string
+  className: PropTypes.string,
+  renderAs: PropTypes.oneOfType([ PropTypes.string, PropTypes.func ])
 }
 
 const defaultProps = {
   children: null,
-  className: null
+  className: null,
+  renderAs: 'div'
 }
 
 export const FormGroup = ({ children, ...props }) => {
-  const { className, ...attributes } = props
+  const { className, renderAs: Element, ...attributes } = props
   const classNames = classnames('form-group', className)
 
   return (
-    <div {...attributes} className={classNames}>
+    <Element {...attributes} className={classNames}>
       { children }
-    </div>
+    </Element>
   )
 }
 
