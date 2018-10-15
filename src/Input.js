@@ -19,10 +19,7 @@ const propTypes = {
 }
 
 const defaultProps = {
-  className: null,
   type: 'text',
-  name: null,
-  placeholder: null,
   large: false,
   small: false,
   iconLeft: false,
