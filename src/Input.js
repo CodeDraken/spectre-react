@@ -14,7 +14,8 @@ const propTypes = {
   large: PropTypes.bool,
   iconLeft: PropTypes.bool,
   iconRight: PropTypes.bool,
-  renderAs: PropTypes.oneOfType([ PropTypes.string, PropTypes.func ])
+  renderAs: PropTypes.oneOfType([ PropTypes.string, PropTypes.func ]),
+  iconWrapper: PropTypes.oneOfType([ PropTypes.string, PropTypes.func ])
 }
 
 const defaultProps = {
@@ -26,7 +27,8 @@ const defaultProps = {
   small: false,
   iconLeft: false,
   iconRight: false,
-  renderAs: 'input'
+  renderAs: 'input',
+  iconWrapper: 'div'
 }
 
 export const Input = ({ children, ...props }) => {
@@ -41,6 +43,7 @@ export const Input = ({ children, ...props }) => {
     iconRight,
     iconLeft,
     renderAs: Element,
+    iconWrapper: Wrapper,
 
     ...attributes
   } = props
@@ -72,10 +75,10 @@ export const Input = ({ children, ...props }) => {
   return (
     iconLeft || iconRight
       ? (
-        <div className={`has-icon-${iconPosition}`}>
+        <Wrapper className={`has-icon-${iconPosition}`}>
           { input }
           { children }
-        </div>
+        </Wrapper>
       )
       : input
   )
