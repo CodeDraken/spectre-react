@@ -2,22 +2,21 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
-import NavbarSection from './NavbarSection'
-import NavbarBrand from './NavbarBrand'
-
 const propTypes = {
   children: PropTypes.node,
   renderAs: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  className: PropTypes.string
+  className: PropTypes.string,
+  href: PropTypes.string
 }
 
 const defaultProps = {
-  renderAs: 'nav'
+  renderAs: 'a',
+  href: '#'
 }
 
-export const Navbar = ({ children, ...props }) => {
+export const NavbarBrand = ({ children, ...props }) => {
   const { className, renderAs: Element, ...attributes } = props
-  const classNames = classnames('navbar', className)
+  const classNames = classnames('navbar-brand', className)
 
   return (
     <Element {...attributes} className={classNames}>
@@ -26,9 +25,7 @@ export const Navbar = ({ children, ...props }) => {
   )
 }
 
-Navbar.propTypes = propTypes
-Navbar.defaultProps = defaultProps
-Navbar.Section = NavbarSection
-Navbar.Brand = NavbarBrand
+NavbarBrand.propTypes = propTypes
+NavbarBrand.defaultProps = defaultProps
 
-export default Navbar
+export default NavbarBrand

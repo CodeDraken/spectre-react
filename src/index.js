@@ -8,6 +8,7 @@ import { Col } from './Col'
 import { Row } from './Row'
 import { Container } from './Container'
 import { Label } from './Label'
+import { Navbar } from './Navbar'
 
 export {
   Button,
@@ -20,5 +21,6 @@ export {
   Col,
   Row,
   Container,
-  Label
+  Label,
+  Navbar
 }
