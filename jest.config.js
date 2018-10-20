@@ -2,7 +2,8 @@ module.exports = {
   setupTestFrameworkScriptFile: './__test__/setupTests.js',
   rootDir: 'src',
   testMatch: ['**/*.test.js'],
-  coverageDirectory: '<rootDir>/../.coverage',
+  collectCoverage: true,
+  coverageDirectory: '<rootDir>/../coverage',
   'snapshotSerializers': ['enzyme-to-json/serializer'],
 
   collectCoverageFrom: [
