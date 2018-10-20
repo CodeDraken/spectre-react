@@ -11,6 +11,7 @@ import { Label } from './Label'
 import { Navbar } from './Navbar'
 import { NavbarSection } from './NavbarSection'
 import { NavbarBrand } from './NavbarBrand'
+import { Code } from './Code'
 
 export {
   Button,
@@ -26,5 +27,6 @@ export {
   Label,
   Navbar,
   NavbarSection,
-  NavbarBrand
+  NavbarBrand,
+  Code
 }
