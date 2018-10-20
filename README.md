@@ -2,6 +2,8 @@
 # Spectre React Components
 
 [![Build Status](https://travis-ci.com/CodeDraken/spectre-react.svg?branch=master)](https://travis-ci.com/CodeDraken/spectre-react)
+[![Dependencies](https://david-dm.org/CodeDraken/spectre-react.svg)](https://david-dm.org/CodeDraken/spectre-react)
+[![codecov](https://codecov.io/gh/CodeDraken/spectre-react/branch/master/graph/badge.svg)](https://codecov.io/gh/CodeDraken/spectre-react)
 
 React components for the [Spectre CSS library](https://picturepan2.github.io/spectre/index.html).
 
