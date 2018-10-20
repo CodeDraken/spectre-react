@@ -9,6 +9,8 @@ import { Row } from './Row'
 import { Container } from './Container'
 import { Label } from './Label'
 import { Navbar } from './Navbar'
+import { NavbarSection } from './NavbarSection'
+import { NavbarBrand } from './NavbarBrand'
 
 export {
   Button,
@@ -22,5 +24,7 @@ export {
   Row,
   Container,
   Label,
-  Navbar
+  Navbar,
+  NavbarSection,
+  NavbarBrand
 }
