@@ -30,3 +30,46 @@ View the components on the [GitHub Page](https://codedraken.github.io/spectre-re
 `npm run build` - outputs minified, processed code into `dist/index.js` Use this to test the components like you would if you had installed the package from npm. i.e `import { Button } from 'dist'`
 
 `storybook-deploy` - deploys storybook to gh-pages branch.
+
+### Component Layout
+
+Add this snippet in `VS Code > preferences > user snippets > JavaScript` for quick component creation.
+
+```json
+"reactFunctionalComponent-propTypes": {
+    "prefix": "rfc-pt",
+    "body": [
+      "import React from 'react'",
+      "import PropTypes from 'prop-types'",
+      "import classnames from 'classnames'",
+      "",
+      "const propTypes = {",
+      "  children: PropTypes.node,",
+      "  renderAs: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),",
+      "  className: PropTypes.string",
+      "}",
+      "",
+      "const defaultProps = {",
+      "  renderAs: 'div'",
+      "}",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}} = ({ children, ...props }) => {",
+      "  const { className, renderAs: Element, ...attributes } = props",
+      "  const classNames = classnames('my-class', className)",
+      "",
+      "  return (",
+      "    <Element {...attributes} className={classNames}>",
+      "      ${1:${TM_FILENAME_BASE}}",
+      "    </Element>",
+      "  )",
+      "}",
+      "",
+      "${1:${TM_FILENAME_BASE}}.propTypes = propTypes",
+      "${1:${TM_FILENAME_BASE}}.defaultProps = defaultProps",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React Functional Component with prop types"
+  }
+  ```
