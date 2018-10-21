@@ -26,7 +26,7 @@ export const Video = ({ children, ...props }) => {
 
   const classNames = classnames(
     {
-      'video-responsive': responsive || ratio === '16:9',
+      'video-responsive': responsive || ratio,
       'video-responsive-1-1': ratio === '1:1',
       'video-responsive-4-3': ratio === '4:3'
     },

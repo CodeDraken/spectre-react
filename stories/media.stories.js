@@ -86,8 +86,44 @@ storiesOf('Media', module)
   .add('Video', () => (
     <Container>
       <Row>
-        <Col all={4} offset='mx'>
-          fig
+        <Col all={8} offset='mx'>
+          <strong>Default Video</strong>
+          <br />
+          <Video
+            src='https://interactive-examples.mdn.mozilla.net/media/examples/stream_of_water.webm'
+            controls
+          >
+            Your browser does not support HTML5 video
+          </Video>
+          <hr />
+
+          <strong>Responsive or Ratio set to 16:9</strong>
+          <Video
+            src='https://interactive-examples.mdn.mozilla.net/media/examples/stream_of_water.webm'
+            controls
+            responsive
+          >
+            Your browser does not support HTML5 video
+          </Video>
+          <hr />
+
+          <strong>Ratio 4:3</strong>
+          <Video
+            src='https://interactive-examples.mdn.mozilla.net/media/examples/stream_of_water.webm'
+            controls
+            ratio='4:3'
+          >
+            Your browser does not support HTML5 video
+          </Video>
+
+          <strong>Ratio 1:1</strong>
+          <Video
+            src='https://interactive-examples.mdn.mozilla.net/media/examples/stream_of_water.webm'
+            controls
+            ratio='1:1'
+          >
+            Your browser does not support HTML5 video
+          </Video>
         </Col>
       </Row>
     </Container>
