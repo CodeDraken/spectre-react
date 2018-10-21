@@ -10,7 +10,9 @@ module.exports = {
     '**/*.js',
     '!**/node_modules/**',
     '!**/*.story.js',
-    '!**/*.test.js'
+    '!**/*.stories.js',
+    '!**/*.test.js',
+    '!**/__test__/**'
   ],
 
   coverageReporters: ['lcov', 'text', 'text-summary'],
