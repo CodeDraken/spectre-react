@@ -33,7 +33,7 @@ export const Image = ({ children, ...props }) => {
       'img-fit-cover': cover
     },
     className
-  )
+  ) || null
 
   return (
     <Element {...attributes} className={classNames} />

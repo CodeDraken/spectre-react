@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image Should match the snapshot 1`] = `
+<img
+  className={null}
+/>
+`;
+
+exports[`Image Should render as a custom element 1`] = `
+<Image
+  renderAs={[Function]}
+  src="#test"
+>
+  <Custom
+    className={null}
+    src="#test"
+  >
+    <div>
+      <p>
+        Test
+      </p>
+      <img
+        className={null}
+        src="#test"
+      />
+    </div>
+  </Custom>
+</Image>
+`;
