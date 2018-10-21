@@ -47,7 +47,6 @@ describe('Image', () => {
 
   it('Should render as a custom element', () => {
     const Custom = ({ children, ...attributes }) => {
-      console.log(attributes)
       return (
         <div>
           <p>Test</p>
