@@ -18,7 +18,7 @@ export const FigureCaption = ({ children, ...props }) => {
   const classNames = classnames(
     'figure-caption',
     {
-      [`text-align-${align}`]: align
+      [`text-${align}`]: align
     },
     className
   )
