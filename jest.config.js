@@ -10,7 +10,9 @@ module.exports = {
     '**/*.js',
     '!**/node_modules/**',
     '!**/*.story.js',
-    '!**/*.test.js'
+    '!**/*.stories.js',
+    '!**/*.test.js',
+    '!**/__test__/**'
   ],
 
   coverageReporters: ['lcov', 'text', 'text-summary'],
@@ -22,10 +24,10 @@ module.exports = {
 
   coverageThreshold: {
     global: {
-      branches: 90,
-      functions: 90,
-      lines: 90,
-      statements: 90
+      branches: 70,
+      functions: 70,
+      lines: 70,
+      statements: 70
     }
   },
 

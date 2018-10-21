@@ -12,6 +12,10 @@ import { Navbar } from './Navbar'
 import { NavbarSection } from './NavbarSection'
 import { NavbarBrand } from './NavbarBrand'
 import { Code } from './Code'
+import { Image } from './Image'
+import { Figure } from './Figure'
+import { FigureCaption } from './FigureCaption'
+import { Video } from './Video'
 
 export {
   Button,
@@ -28,5 +32,9 @@ export {
   Navbar,
   NavbarSection,
   NavbarBrand,
-  Code
+  Code,
+  Image,
+  Figure,
+  FigureCaption,
+  Video
 }
