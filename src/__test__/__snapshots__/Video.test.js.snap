@@ -2,6 +2,6 @@
 
 exports[`Video Should match the snapshot 1`] = `
 <video
-  className=""
+  className={null}
 />
 `;

@@ -31,7 +31,7 @@ export const Video = ({ children, ...props }) => {
       'video-responsive-4-3': ratio === '4:3'
     },
     className
-  )
+  ) || null
 
   return (
     <Element {...attributes} className={classNames}>
