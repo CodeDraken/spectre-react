@@ -1,17 +1,13 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { boolean, text, select } from '@storybook/addon-knobs'
 
-import {
-  Image, Figure, Video,
-  Container, Row, Col
-} from '../src'
+import { Grid, Image, Figure, Video } from '../src'
 
 storiesOf('Media', module)
   .add('Image', () => (
-    <Container>
-      <Row>
-        <Col all={4} offset='mx'>
+    <Grid.Container>
+      <Grid.Row>
+        <Grid.Col all={4} offset='mx'>
           <strong>Default Image</strong>
           <br />
           <Image
@@ -45,14 +41,14 @@ storiesOf('Media', module)
             alt='random image'
             cover
           />
-        </Col>
-      </Row>
-    </Container>
+        </Grid.Col>
+      </Grid.Row>
+    </Grid.Container>
   ))
   .add('Figure', () => (
-    <Container>
-      <Row>
-        <Col all={5} offset='mx'>
+    <Grid.Container>
+      <Grid.Row>
+        <Grid.Col all={5} offset='mx'>
           <strong>Default Figure</strong>
           <Figure>
             <Image src='https://source.unsplash.com/random'
@@ -79,14 +75,14 @@ storiesOf('Media', module)
             />
             <Figure.Caption align='right'>Right Caption</Figure.Caption>
           </Figure>
-        </Col>
-      </Row>
-    </Container>
+        </Grid.Col>
+      </Grid.Row>
+    </Grid.Container>
   ))
   .add('Video', () => (
-    <Container>
-      <Row>
-        <Col all={8} offset='mx'>
+    <Grid.Container>
+      <Grid.Row>
+        <Grid.Col all={8} offset='mx'>
           <strong>Default Video</strong>
           <br />
           <Video
@@ -124,7 +120,7 @@ storiesOf('Media', module)
           >
             Your browser does not support HTML5 video
           </Video>
-        </Col>
-      </Row>
-    </Container>
+        </Grid.Col>
+      </Grid.Row>
+    </Grid.Container>
   ))

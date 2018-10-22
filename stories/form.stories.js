@@ -2,10 +2,9 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { text, boolean, action, select } from '@storybook/addon-knobs'
 
-import {
-  FormGroup, Input, Icon, Button,
-  Container, Col, Row, Label
-} from '../src'
+import { Icon, Button, Label } from '../src'
+import { Container, Col, Row } from '../src/Grid'
+import { FormGroup, Input } from '../src/Form'
 
 storiesOf('Forms', module)
   .add('Default', () => (
