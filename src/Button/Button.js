@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
+import ButtonGroup from './ButtonGroup'
+
 const propTypes = {
   action: PropTypes.bool,
   active: PropTypes.bool,
@@ -26,7 +28,7 @@ const defaultProps = {
   // onClick: () => null
 }
 
-export const Button = ({ children, ...props }) => {
+const Button = ({ children, ...props }) => {
   const {
     className,
     onClick,
@@ -94,25 +96,8 @@ export const Button = ({ children, ...props }) => {
   )
 }
 
-export const Group = ({ children, ...props }) => {
-  const { block, ...attributes } = props
-  const classNames = classnames('btn-group', { 'btn-group-block': block })
-
-  return (
-    <div {...attributes} className={classNames}>
-      { children }
-    </div>
-  )
-}
-
-Group.propTypes = {
-  children: PropTypes.node,
-  block: PropTypes.bool
-}
-
 Button.propTypes = propTypes
 Button.defaultProps = defaultProps
-
-Button.Group = Group
+Button.Group = ButtonGroup
 
 export default Button
