@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import { Code } from '../'
+import { Code } from '..'
 
 describe('Code', () => {
   it('Should render a code tag by default', () => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 
-import { Heading } from '../'
+import { Heading } from '..'
 
 describe('Heading', () => {
   it('Should render an h1 tag by default', () => {
