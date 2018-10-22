@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { Container, Col, Row } from '../src/Grid'
+import { Container, Col, Row } from '../src'
 
 storiesOf('Grid', module)
   .add('Default', () => (

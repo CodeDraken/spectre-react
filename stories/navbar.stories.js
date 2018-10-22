@@ -1,9 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { boolean, text, select } from '@storybook/addon-knobs'
+import { select } from '@storybook/addon-knobs'
 
-import { Row, Col, Container } from '../src/Grid'
-import { Navbar, Button } from '../src'
+import { Row, Col, Container, Navbar, Button } from '../src'
 
 const elements = {
   Default: 'nav',
