@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Label } from '..'
+import Label from '../Label'
 
 const propTypes = {
   renderAs: PropTypes.oneOfType([ PropTypes.string, PropTypes.func ]),
@@ -17,7 +17,7 @@ const defaultProps = {
   children: null
 }
 
-export const Heading = ({ children, ...props }) => {
+const Heading = ({ children, ...props }) => {
   const {
     renderAs: Element,
     label,
@@ -32,24 +32,7 @@ export const Heading = ({ children, ...props }) => {
   )
 }
 
-// export const Label = ({ children, ...props }) => {
-//   const { className, ...attributes } = props
-//   const classNames = classnames('label', className)
-
-//   return (
-//     <small {...attributes} className={classNames}>
-//       { children }
-//     </small>
-//   )
-// }
-
-// Label.propTypes = {
-//   children: PropTypes.node,
-//   className: PropTypes.string
-// }
-
 Heading.propTypes = propTypes
-
 Heading.defaultProps = defaultProps
 
 export default Heading

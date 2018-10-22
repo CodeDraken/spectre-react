@@ -18,7 +18,7 @@ const defaultProps = {
   renderAs: 'div'
 }
 
-export const Row = ({ children, ...props }) => {
+const Row = ({ children, ...props }) => {
   const {
     className,
     gapless,

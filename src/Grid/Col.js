@@ -29,7 +29,7 @@ const defaultProps = {
   renderAs: 'div'
 }
 
-export const Col = ({ children, ...props }) => {
+const Col = ({ children, ...props }) => {
   const {
     className,
     xs,

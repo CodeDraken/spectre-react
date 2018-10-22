@@ -28,7 +28,7 @@ const defaultProps = {
   iconWrapper: 'div'
 }
 
-export const Input = ({ children, ...props }) => {
+const Input = ({ children, ...props }) => {
   const {
     className,
     name,

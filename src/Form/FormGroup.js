@@ -14,7 +14,7 @@ const defaultProps = {
   renderAs: 'div'
 }
 
-export const FormGroup = ({ children, ...props }) => {
+const FormGroup = ({ children, ...props }) => {
   const { className, renderAs: Element, ...attributes } = props
   const classNames = classnames('form-group', className)
 

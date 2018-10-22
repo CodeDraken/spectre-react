@@ -18,7 +18,7 @@ const defaultProps = {
   renderAs: 'i'
 }
 
-export const Icon = ({ children, ...props }) => {
+const Icon = ({ children, ...props }) => {
   const { className, formIcon, icon, size, renderAs: Element, ...attributes } = props
 
   const classNames = classnames(

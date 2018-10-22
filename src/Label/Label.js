@@ -24,7 +24,7 @@ const defaultProps = {
   for: null
 }
 
-export const Label = ({ children, ...props }) => {
+const Label = ({ children, ...props }) => {
   const {
     color,
     rounded,

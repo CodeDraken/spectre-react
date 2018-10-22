@@ -14,7 +14,7 @@ const defaultProps = {
   renderAs: 'video'
 }
 
-export const Video = ({ children, ...props }) => {
+const Video = ({ children, ...props }) => {
   const {
     className,
     responsive,

@@ -16,7 +16,7 @@ const defaultProps = {
   renderAs: 'div'
 }
 
-export const Container = ({ children, ...props }) => {
+const Container = ({ children, ...props }) => {
   const {
     className,
     size,

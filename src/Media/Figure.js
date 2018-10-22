@@ -14,7 +14,7 @@ const defaultProps = {
   renderAs: 'figure'
 }
 
-export const Figure = ({ children, ...props }) => {
+const Figure = ({ children, ...props }) => {
   const {
     className,
     renderAs: Element,

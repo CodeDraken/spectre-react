@@ -13,7 +13,7 @@ const defaultProps = {
   renderAs: 'figcaption'
 }
 
-export const FigureCaption = ({ children, ...props }) => {
+const FigureCaption = ({ children, ...props }) => {
   const { className, align, renderAs: Element, ...attributes } = props
   const classNames = classnames(
     'figure-caption',

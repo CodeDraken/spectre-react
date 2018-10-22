@@ -1,10 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { text, select, boolean } from '@storybook/addon-knobs'
 
-import {
-  Container, Col, Row
-} from '../src'
+import { Container, Col, Row } from '../src/Grid'
 
 storiesOf('Grid', module)
   .add('Default', () => (

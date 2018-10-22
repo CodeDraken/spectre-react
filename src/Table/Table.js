@@ -20,7 +20,7 @@ const defaultProps = {
   renderAs: 'table'
 }
 
-export const Table = ({ children, ...props }) => {
+const Table = ({ children, ...props }) => {
   const {
     className,
     striped,

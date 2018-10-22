@@ -15,7 +15,7 @@ const defaultProps = {
   multi: false
 }
 
-export const Code = ({ children, ...props }) => {
+const Code = ({ children, ...props }) => {
   const {
     className,
     renderAs,

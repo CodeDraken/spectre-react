@@ -15,7 +15,7 @@ const defaultProps = {
   renderAs: 'img'
 }
 
-export const Image = ({ children, ...props }) => {
+const Image = ({ children, ...props }) => {
   const {
     className,
     responsive,
