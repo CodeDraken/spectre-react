@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { text, boolean, action, select } from '@storybook/addon-knobs'
+import { text, boolean } from '@storybook/addon-knobs'
 
 import {
   Icon, Button, Label,
