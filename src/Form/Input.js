@@ -34,7 +34,6 @@ const Input = ({ children, ...props }) => {
     name,
     type,
     placeholder,
-    value,
     small,
     large,
     iconRight,
@@ -60,7 +59,6 @@ const Input = ({ children, ...props }) => {
     <Element
       {...attributes}
       name={name}
-      value={value}
       type={type}
       placeholder={placeholder}
       className={classNames}
