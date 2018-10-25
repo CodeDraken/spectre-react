@@ -40,8 +40,8 @@ describe('Label', () => {
     expect(wrapper.hasClass('form-label')).toBe(true)
   })
 
-  it('Should render a label tag when its passed a "for" attribute', () => {
-    const wrapper = shallow(<Label for='test'>For attr</Label>)
+  it('Should render a label tag when its passed a "htmlFor" attribute', () => {
+    const wrapper = shallow(<Label htmlFor='test'>For attr</Label>)
 
     expect(wrapper.type()).toBe('label')
   })

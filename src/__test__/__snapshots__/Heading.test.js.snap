@@ -1,7 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Heading Should match the snapshot 1`] = `
-<h1
-  className={null}
-/>
-`;
+exports[`Heading Should match the snapshot 1`] = `<h1 />`;

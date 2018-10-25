@@ -12,8 +12,6 @@ const propTypes = {
 }
 
 const defaultProps = {
-  className: null,
-  children: null,
   striped: false,
   hover: false,
   scroll: false,

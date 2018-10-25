@@ -9,8 +9,6 @@ const propTypes = {
 }
 
 const defaultProps = {
-  children: null,
-  className: null,
   renderAs: 'div'
 }
 

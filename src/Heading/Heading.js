@@ -11,10 +11,7 @@ const propTypes = {
 }
 
 const defaultProps = {
-  renderAs: 'h1',
-  className: null,
-  label: null,
-  children: null
+  renderAs: 'h1'
 }
 
 const Heading = ({ children, ...props }) => {

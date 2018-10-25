@@ -3,6 +3,5 @@
 exports[`Label Should match the snapshot 1`] = `
 <span
   className="label"
-  htmlFor={null}
 />
 `;

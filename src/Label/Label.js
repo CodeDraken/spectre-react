@@ -10,18 +10,14 @@ const propTypes = {
   color: PropTypes.oneOf(colors),
   rounded: PropTypes.bool,
   form: PropTypes.bool,
-  for: PropTypes.string,
+  htmlFor: PropTypes.string,
   renderAs: PropTypes.oneOfType([ PropTypes.func, PropTypes.string ])
 }
 
 const defaultProps = {
-  children: null,
-  className: null,
   renderAs: 'span',
-  color: null,
   rounded: false,
-  form: false,
-  for: null
+  form: false
 }
 
 const Label = ({ children, ...props }) => {
@@ -31,7 +27,7 @@ const Label = ({ children, ...props }) => {
     small,
     className,
     renderAs,
-    for: htmlFor,
+    htmlFor,
     form,
 
     ...attributes

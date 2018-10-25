@@ -22,8 +22,6 @@ const propTypes = {
 }
 
 const defaultProps = {
-  children: null,
-  className: null,
   hide: [],
   show: [],
   renderAs: 'div'

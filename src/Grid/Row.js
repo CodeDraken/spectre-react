@@ -11,8 +11,6 @@ const propTypes = {
 }
 
 const defaultProps = {
-  children: null,
-  className: null,
   gapless: false,
   oneline: false,
   renderAs: 'div'
