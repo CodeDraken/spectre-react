@@ -15,17 +15,17 @@ storiesOf('Forms', module)
         <Col all={6} xs={12}>
           <form>
             <FormGroup>
-              <Label form for='input-example-1'>Name</Label>
+              <Label form htmlFor='input-example-1'>Name</Label>
               <Input placeholder='username' id='input-example-1' />
             </FormGroup>
 
             <FormGroup>
-              <Label form for='input-example-2'>Password</Label>
+              <Label form htmlFor='input-example-2'>Password</Label>
               <Input type='password' id='input-example-2' placeholder='password' />
             </FormGroup>
 
             <FormGroup>
-              <Label form for='input-example-3'>Email</Label>
+              <Label form htmlFor='input-example-3'>Email</Label>
               <Input id='input-example-3' type='email' placeholder='email'
                 iconLeft={boolean('iconLeft', true)}
                 iconRight={boolean('iconRight', false)}

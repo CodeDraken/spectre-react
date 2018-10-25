@@ -20,7 +20,7 @@ storiesOf('Navbar', module)
               <Navbar.Brand>Brand</Navbar.Brand>
             </Navbar.Section>
 
-            <Navbar.Section centered>
+            <Navbar.Section center>
               <Button link>\ ( ^ _ ^ ) /</Button>
             </Navbar.Section>
 
