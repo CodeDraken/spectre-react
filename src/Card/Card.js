@@ -5,6 +5,7 @@ import classnames from 'classnames'
 import CardBody from './CardBody'
 import CardFooter from './CardFooter'
 import CardImage from './CardImage'
+import CardHeader from './CardHeader'
 
 const propTypes = {
   children: PropTypes.node,
@@ -33,5 +34,6 @@ Card.defaultProps = defaultProps
 Card.Body = CardBody
 Card.Footer = CardFooter
 Card.Image = CardImage
+Card.Header = CardHeader
 
 export default Card
