@@ -3,6 +3,7 @@
 
 [![Build Status](https://travis-ci.com/CodeDraken/spectre-react.svg?branch=master)](https://travis-ci.com/CodeDraken/spectre-react)
 [![codecov](https://codecov.io/gh/CodeDraken/spectre-react/branch/master/graph/badge.svg)](https://codecov.io/gh/CodeDraken/spectre-react)
+[![npm version](https://badge.fury.io/js/spectre-react.svg)](https://badge.fury.io/js/spectre-react)
 
 [![Dependencies](https://david-dm.org/CodeDraken/spectre-react.svg)](https://david-dm.org/CodeDraken/spectre-react)
 [![devDependencies Status](https://david-dm.org/CodeDraken/spectre-react/dev-status.svg)](https://david-dm.org/CodeDraken/spectre-react?type=dev)
