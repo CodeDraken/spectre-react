@@ -22,9 +22,7 @@
     ]
   },
   "scripts": {
-    "prebuild": "rimraf dist && rimraf lib && babel -d lib src --ignore 'src/__test__/*.*'",
-    "build": "parcel build lib/index.js",
-    "postbuild": "rimraf lib",
+    "build": "parcel build --experimental-scope-hoisting src/index.js",
     "storybook": "start-storybook -p 6006 -c .storybook",
     "storybook-deploy": "storybook-to-ghpages",
     "test": "jest",
