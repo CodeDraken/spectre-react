@@ -1,7 +1,7 @@
 {
   "name": "spectre-react",
   "version": "0.1.0",
-  "description": "React bindings for Spectre.css",
+  "description": "React components for Spectre.css",
   "main": "dist",
   "files": [
     "dist"
