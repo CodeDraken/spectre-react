@@ -15,6 +15,8 @@ This project was started during the React Riot Hackathon. It's not fully complet
 
 View the components on the [GitHub Page](https://codedraken.github.io/spectre-react/)
 
+Install with `npm i spectre-react`
+
 ## Contributing Instructions
 
 1. Fork the repo and download / clone your fork.
