@@ -22,7 +22,7 @@ storiesOf('Card', module)
             </CardHeader>
 
             <Card.Body>
-            Lorem ipsum dolor sit amet consectetur
+              Lorem ipsum dolor sit amet consectetur
             </Card.Body>
 
             <Card.Footer>
