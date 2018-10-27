@@ -16,7 +16,12 @@ This project was started during the React Riot Hackathon. It's not fully complet
 
 View the components on the [GitHub Page](https://codedraken.github.io/spectre-react/)
 
+## Setup Instructions
+
 Install with `npm i spectre-react`
+
+Spectre.css is not included - [download CSS files here](https://picturepan2.github.io/spectre/getting-started.html#installation)
+
 
 ## Contributing Instructions
 
