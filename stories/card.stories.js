@@ -10,10 +10,10 @@ storiesOf('Card', module)
   .add('Default', () => (
     <Container>
       <Row>
-        <Col all={6} offset='mx'>
+        <Col sm={10} md={8} xl={6} all={4} offset='mx'>
           <Card>
             <Card.Image>
-              <Media.Image src='https://source.unsplash.com/random' responsive />
+              <Media.Image src='https://source.unsplash.com/random/640x455' responsive />
             </Card.Image>
 
             <CardHeader>
