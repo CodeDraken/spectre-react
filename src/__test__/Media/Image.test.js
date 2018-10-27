@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 
-import { Image } from '../'
+import { Image } from '../..'
 
 describe('Image', () => {
   it('Should render default img markup', () => {

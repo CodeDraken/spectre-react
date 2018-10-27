@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import { NavbarSection } from '../'
+import { NavbarSection } from '../..'
 
 describe('NavbarSection', () => {
   it('Should render default .navbar-section markup', () => {

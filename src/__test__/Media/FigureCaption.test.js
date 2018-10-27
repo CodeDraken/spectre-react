@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import { FigureCaption } from '../'
+import { FigureCaption } from '../..'
 
 describe('FigureCaption', () => {
   it('Should render default .figure-caption markup', () => {

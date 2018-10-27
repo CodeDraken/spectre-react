@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import { Label } from '..'
+import { Label } from '../..'
 
 describe('Label', () => {
   it('Should render a span tag by default', () => {

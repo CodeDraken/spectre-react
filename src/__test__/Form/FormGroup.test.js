@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import { FormGroup } from '../'
+import { FormGroup } from '../..'
 
 describe('FormGroup', () => {
   it('Should render default .form-group markup', () => {

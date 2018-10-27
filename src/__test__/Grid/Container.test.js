@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import { Container } from '..'
+import { Container } from '../..'
 
 describe('Container', () => {
   it('Should render default .container markup', () => {

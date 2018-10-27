@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import { Video } from '../'
+import { Video } from '../..'
 
 describe('Video', () => {
   it('Should render default video markup', () => {
