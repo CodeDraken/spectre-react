@@ -5,3 +5,10 @@ exports[`Figure Should match the snapshot 1`] = `
   className="figure"
 />
 `;
+
+exports[`Figure Should match the snapshot of an avatar 1`] = `
+<figure
+  className="figure avatar avatar-sm"
+  data-initial="CD"
+/>
+`;

@@ -79,6 +79,61 @@ storiesOf('Media', module)
       </Grid.Row>
     </Grid.Container>
   ))
+  .add('Avatars', () => (
+    <Grid.Container>
+      <Grid.Row>
+        <Grid.Col all={10} offset='mx'>
+          <p><strong>Avatars</strong></p>
+
+          <strong>Default: </strong>
+          <Figure avatar>
+            <Image
+              src='https://picturepan2.github.io/spectre/img/avatar-1.png'
+              alt='default avatar'
+            />
+          </Figure>
+          <br />
+          <hr />
+
+          <strong>Sizes: xs, sm, lg, xl</strong>
+
+          <br />
+
+          <Figure avatar size='xs'>
+            <Image
+              src='https://picturepan2.github.io/spectre/img/avatar-1.png'
+              alt='xs avatar'
+            />
+          </Figure>
+          <Figure avatar size='sm'>
+            <Image
+              src='https://picturepan2.github.io/spectre/img/avatar-1.png'
+              alt='sm avatar'
+            />
+          </Figure>
+          <Figure avatar size='lg'>
+            <Image
+              src='https://picturepan2.github.io/spectre/img/avatar-1.png'
+              alt='lg avatar'
+            />
+          </Figure>
+          <Figure avatar size='xl'>
+            <Image
+              src='https://picturepan2.github.io/spectre/img/avatar-1.png'
+              alt='xl avatar'
+            />
+          </Figure>
+
+          <br />
+          <hr />
+
+          <p><strong>Initials</strong></p>
+          <Figure avatar size='xl' initials='AB' />
+          <Figure avatar size='xl' initials='CD' />
+        </Grid.Col>
+      </Grid.Row>
+    </Grid.Container>
+  ))
   .add('Video', () => (
     <Grid.Container>
       <Grid.Row>

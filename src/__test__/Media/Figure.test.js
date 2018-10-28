@@ -29,6 +29,42 @@ describe('Figure', () => {
     expect(wrapper.hasClass('extra')).toBe(true)
   })
 
+  it('Should be an avatar', () => {
+    const wrapper = shallow(<Figure avatar />)
+
+    expect(wrapper.hasClass('avatar')).toBe(true)
+  })
+
+  it('Should render the xs avatar size', () => {
+    const wrapper = shallow(<Figure avatar size='xs' />)
+
+    expect(wrapper.hasClass('avatar-xs')).toBe(true)
+  })
+
+  it('Should render the sm avatar size', () => {
+    const wrapper = shallow(<Figure avatar size='sm' />)
+
+    expect(wrapper.hasClass('avatar-sm')).toBe(true)
+  })
+
+  it('Should render the lg avatar size', () => {
+    const wrapper = shallow(<Figure avatar size='lg' />)
+
+    expect(wrapper.hasClass('avatar-lg')).toBe(true)
+  })
+
+  it('Should render the xl avatar size', () => {
+    const wrapper = shallow(<Figure avatar size='xl' />)
+
+    expect(wrapper.hasClass('avatar-xl')).toBe(true)
+  })
+
+  it('Should pass intials as a data-initials attribute', () => {
+    const wrapper = shallow(<Figure avatar initials='CD' />)
+
+    expect(wrapper.prop('data-initial')).toBe('CD')
+  })
+
   it('Should render as a custom element', () => {
     const wrapper = shallow(<Figure renderAs='main' />)
 
@@ -42,6 +78,12 @@ describe('Figure', () => {
 
   it('Should match the snapshot', () => {
     const wrapper = shallow(<Figure />)
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('Should match the snapshot of an avatar', () => {
+    const wrapper = shallow(<Figure avatar size='sm' initials='CD' />)
 
     expect(wrapper).toMatchSnapshot()
   })
