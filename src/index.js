@@ -22,6 +22,10 @@ export Navbar from './Navbar'
 export NavbarBrand from './Navbar/NavbarBrand'
 export NavbarSection from './Navbar/NavbarSection'
 
+// Nav
+export Nav from './Nav'
+export NavItem from './Nav/NavItem'
+
 // Card
 export Card from './Card'
 export CardBody from './Card/CardBody'
