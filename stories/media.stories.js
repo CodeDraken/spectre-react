@@ -134,8 +134,23 @@ storiesOf('Media', module)
           <br />
           <hr />
 
-          <p><strong>Alias</strong></p>
-          <Avatar size='xl' initials='AL' />
+          <p><strong>Alias Component and Statuses</strong></p>
+          <p>offline ( the default ), online, busy, away</p>
+          <Avatar initials='JP'>
+            <Avatar.Status />
+          </Avatar>
+          <Avatar initials='EM'>
+            <Avatar.Status online />
+          </Avatar>
+          <Avatar initials='EB'>
+            <Avatar.Status busy />
+          </Avatar>
+          <Avatar initials='AW'>
+            <Avatar.Status away />
+          </Avatar>
+
+          <br />
+          <hr />
         </Grid.Col>
       </Grid.Row>
     </Grid.Container>

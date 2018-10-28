@@ -15,7 +15,7 @@ const defaultProps = {
   renderAs: 'i'
 }
 
-const AvatarPresence = ({ children, ...props }) => {
+const AvatarStatus = ({ children, ...props }) => {
   const { className, online, busy, away, renderAs: Element, ...attributes } = props
   const classNames = classnames(
     'avatar-presence',
@@ -32,7 +32,7 @@ const AvatarPresence = ({ children, ...props }) => {
   )
 }
 
-AvatarPresence.propTypes = propTypes
-AvatarPresence.defaultProps = defaultProps
+AvatarStatus.propTypes = propTypes
+AvatarStatus.defaultProps = defaultProps
 
-export default AvatarPresence
+export default AvatarStatus

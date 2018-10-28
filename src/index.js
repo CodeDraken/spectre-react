@@ -65,3 +65,4 @@ export Video from './Media/Video'
 // -------------------
 
 export Avatar from './Avatar'
+export AvatarStatus from './Avatar/AvatarStatus'
