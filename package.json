@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/CodeDraken/spectre-react.git"
   },
-  "homepage": "https://github.com/CodeDraken/spectre-react",
+  "homepage": "https://codedraken.github.io/spectre-react/",
   "standard": {
     "ignore": [
       "node_modules/**"
