@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { Grid, Image, Figure, Video } from '../src'
+import { Grid, Image, Figure, Video, Avatar } from '../src'
 
 storiesOf('Media', module)
   .add('Image', () => (
@@ -130,6 +130,12 @@ storiesOf('Media', module)
           <p><strong>Initials</strong></p>
           <Figure avatar size='xl' initials='AB' />
           <Figure avatar size='xl' initials='CD' />
+
+          <br />
+          <hr />
+
+          <p><strong>Alias</strong></p>
+          <Avatar size='xl' initials='AL' />
         </Grid.Col>
       </Grid.Row>
     </Grid.Container>
