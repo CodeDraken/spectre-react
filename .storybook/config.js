@@ -9,7 +9,7 @@ import backgrounds from '@storybook/addon-backgrounds';
 
 setOptions({
   name: 'Spectre React Components',
-  url: 'https://github.com/Hackbit/reactriot2018-codedraken',
+  url: 'https://github.com/CodeDraken/spectre-react',
   showAddonPanel: true,
 })
 
