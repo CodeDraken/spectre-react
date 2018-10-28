@@ -1,7 +1,3 @@
-import React from 'react'
-
-import Figure from './Media/Figure'
-
 // -------------------
 // SINGLE COMPONENTS
 // -------------------
@@ -68,4 +64,4 @@ export Video from './Media/Video'
 // Aliases / HOC
 // -------------------
 
-export const Avatar = (props) => (<Figure {...props} avatar />)
+export Avatar from './Avatar'
