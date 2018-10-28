@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tile Should match a full snapshot 1`] = `
+<div
+  class="tile"
+>
+  <div
+    class="tile-icon"
+  >
+    <div>
+      <img
+        src="#"
+      />
+    </div>
+  </div>
+  <div
+    class="tile-content"
+  >
+    <p
+      class="tile-title"
+    >
+      Default Tile
+    </p>
+    <p
+      class="tile-subtitle text-gray"
+    >
+      a subtitle
+    </p>
+  </div>
+  <div
+    class="tile-action"
+  >
+    <button>
+      Click me
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Tile Should match the snapshot 1`] = `
+<div
+  className="tile"
+/>
+`;

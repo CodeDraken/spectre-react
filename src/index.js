@@ -26,6 +26,14 @@ export NavbarSection from './Navbar/NavbarSection'
 export Nav from './Nav'
 export NavItem from './Nav/NavItem'
 
+// Tile
+export Tile from './Tile'
+export TileAction from './Tile/TileAction'
+export TileContent from './Tile/TileContent'
+export TileIcon from './Tile/TileIcon'
+export TileSubtitle from './Tile/TileSubtitle'
+export TileTitle from './Tile/TileTitle'
+
 // Card
 export Card from './Card'
 export CardBody from './Card/CardBody'
