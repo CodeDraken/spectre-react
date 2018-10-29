@@ -64,6 +64,11 @@ export Figure from './Media/Figure'
 export FigureCaption from './Media/FigureCaption'
 export Video from './Media/Video'
 
+// Accordion
+export Accordion from './Accordion'
+export AccordionBody from './Accordion/AccordionBody'
+export AccordionHeader from './Accordion/AccordionHeader'
+
 // -------------------
 // Aliases / HOC
 // -------------------
