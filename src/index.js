@@ -33,6 +33,10 @@ export TileIcon from './Tile/TileIcon'
 export TileSubtitle from './Tile/TileSubtitle'
 export TileTitle from './Tile/TileTitle'
 
+// Popover
+export Popover from './Popover'
+export PopoverContainer from './Popover/PopoverContainer'
+
 // Card
 export Card from './Card'
 export CardBody from './Card/CardBody'
