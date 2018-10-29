@@ -44,7 +44,7 @@ export CardFooter from './Card/CardFooter'
 export CardImage from './Card/CardImage'
 export CardHeader from './Card/CardHeader'
 export CardTitle from './Card/CardHeader/CardTitle'
-export CardSubTitle from './Card/CardHeader/CardSubTitle'
+export CardSubtitle from './Card/CardHeader/CardSubtitle'
 
 // Form
 export Form from './Form'

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
 import CardTitle from './CardTitle'
-import CardSubTitle from './CardSubTitle'
+import CardSubtitle from './CardSubtitle'
 
 const propTypes = {
   children: PropTypes.node,
@@ -30,6 +30,6 @@ CardHeader.propTypes = propTypes
 CardHeader.defaultProps = defaultProps
 
 CardHeader.Title = CardTitle
-CardHeader.SubTitle = CardSubTitle
+CardHeader.SubTitle = CardSubtitle
 
 export default CardHeader

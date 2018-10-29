@@ -1,11 +1,11 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import { CardSubTitle } from '../../../'
+import { CardSubtitle } from '../../..'
 
-describe('CardSubTitle', () => {
+describe('CardSubtitle', () => {
   it('Should render default .card-subtitle markup', () => {
-    const wrapper = shallow(<CardSubTitle />)
+    const wrapper = shallow(<CardSubtitle />)
 
     expect(wrapper.type()).toBe('div')
     expect(wrapper.hasClass('card-subtitle')).toBe(true)
@@ -13,9 +13,9 @@ describe('CardSubTitle', () => {
 
   it('Should render children', () => {
     const wrapper = shallow(
-      <CardSubTitle>
+      <CardSubtitle>
         <p>hello world</p>
-      </CardSubTitle>
+      </CardSubtitle>
     )
 
     expect(wrapper.children().length).toBe(1)
@@ -23,14 +23,14 @@ describe('CardSubTitle', () => {
   })
 
   it('Should pass classnames', () => {
-    const wrapper = shallow(<CardSubTitle className='extra' />)
+    const wrapper = shallow(<CardSubtitle className='extra' />)
 
     expect(wrapper.hasClass('extra')).toBe(true)
     expect(wrapper.hasClass('card-subtitle')).toBe(true)
   })
 
   it('Should render as a custom element', () => {
-    const wrapper = shallow(<CardSubTitle renderAs='main'>custom</CardSubTitle>)
+    const wrapper = shallow(<CardSubtitle renderAs='main'>custom</CardSubtitle>)
 
     expect(wrapper.text()).toBe('custom')
     expect(wrapper.hasClass('card-subtitle')).toBe(true)
@@ -38,7 +38,7 @@ describe('CardSubTitle', () => {
   })
 
   it('Should match the snapshot', () => {
-    const wrapper = shallow(<CardSubTitle />)
+    const wrapper = shallow(<CardSubtitle />)
 
     expect(wrapper).toMatchSnapshot()
   })
