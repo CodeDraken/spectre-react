@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AccordionHeader Should match the snapshot 1`] = `
+<Fragment>
+  <input
+    hidden={true}
+    type="checkbox"
+  />
+  <label
+    className="accordion-header c-hand"
+  />
+</Fragment>
+`;

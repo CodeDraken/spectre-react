@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion Should match the snapshot 1`] = `
+<div
+  className="accordion"
+/>
+`;
+
+exports[`Accordion Should match the use case 1`] = `
+<div>
+  <div
+    class="accordion"
+  >
+    <input
+      hidden=""
+      id="accordion-1"
+      type="checkbox"
+    />
+    <label
+      class="accordion-header c-hand"
+      for="accordion-1"
+    >
+      Toggle
+    </label>
+    <div
+      class="accordion-body"
+    >
+      <ul>
+        <li>
+          Item
+        </li>
+        <li>
+          Item
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    class="accordion"
+  >
+    <input
+      hidden=""
+      id="accordion-2"
+      type="radio"
+    />
+    <label
+      class="accordion-header c-hand"
+      for="accordion-2"
+    >
+      <i />
+      Toggle Radio
+    </label>
+    <div
+      class="accordion-body"
+    >
+      <ul>
+        <li>
+          Item
+        </li>
+        <li>
+          Item
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
