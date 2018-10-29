@@ -2,25 +2,49 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
+const types = [ 'checkbox', 'radio' ]
+
 const propTypes = {
   children: PropTypes.node,
-  renderAs: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  className: PropTypes.string
+  className: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(types),
+  inputProps: PropTypes.object
 }
 
 const defaultProps = {
-  renderAs: 'label'
+  type: 'checkbox'
 }
 
 const AccordionHeader = ({ children, ...props }) => {
-  const { className, renderAs: Element, ...attributes } = props
-  const classNames = classnames('accordion-header', className)
+  const {
+    className,
+    id,
+    type,
+    inputProps,
+    renderAs: Element,
 
+    ...attributes
+  } = props
+  const classNames = classnames('accordion-header', 'c-hand', className)
+
+  // has to use Fragment due to the way Spectre CSS works
   return (
-    <Element {...attributes} className={classNames}>
-      { Element === 'label' && <input type='checkbox' hidden /> }
-      { children }
-    </Element>
+    <React.Fragment>
+      <input
+        type={type}
+        id={id}
+        hidden
+        {...inputProps}
+      />
+      <label
+        {...attributes}
+        className={classNames}
+        htmlFor={id}
+      >
+        { children }
+      </label>
+    </React.Fragment>
   )
 }
 
