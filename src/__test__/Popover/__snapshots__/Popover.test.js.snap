@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Popover Should match the snapshot 1`] = `
+<div
+  className="popover"
+/>
+`;
+
+exports[`Popover Should match the use case 1`] = `
+<div
+  class="popover"
+>
+  <button
+    class="btn btn-primary"
+  >
+    popover
+  </button>
+  <div
+    class="popover-container"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="card-header"
+      >
+        header
+      </div>
+      <div
+        class="card-body"
+      >
+        body
+      </div>
+      <div
+        class="card-footer"
+      >
+        footer
+      </div>
+    </div>
+  </div>
+</div>
+`;
