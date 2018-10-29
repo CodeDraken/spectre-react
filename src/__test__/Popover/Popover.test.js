@@ -69,16 +69,16 @@ describe('Popover', () => {
   it('Should match the use case', () => {
     const wrapper = render(
       <Popover>
-        <button class='btn btn-primary'>popover</button>
+        <button className='btn btn-primary'>popover</button>
         <Popover.Container>
-          <div class='card'>
-            <div class='card-header'>
+          <div className='card'>
+            <div className='card-header'>
               header
             </div>
-            <div class='card-body'>
+            <div className='card-body'>
               body
             </div>
-            <div class='card-footer'>
+            <div className='card-footer'>
               footer
             </div>
           </div>
