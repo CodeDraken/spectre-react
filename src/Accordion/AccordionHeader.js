@@ -18,6 +18,7 @@ const AccordionHeader = ({ children, ...props }) => {
 
   return (
     <Element {...attributes} className={classNames}>
+      { Element === 'label' && <input type='checkbox' hidden /> }
       { children }
     </Element>
   )

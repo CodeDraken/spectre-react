@@ -2,6 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
+import AccordionBody from './AccordionBody'
+import AccordionHeader from './AccordionHeader'
+
 const propTypes = {
   children: PropTypes.node,
   renderAs: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -25,5 +28,8 @@ const Accordion = ({ children, ...props }) => {
 
 Accordion.propTypes = propTypes
 Accordion.defaultProps = defaultProps
+
+Accordion.Body = AccordionBody
+Accordion.Header = AccordionHeader
 
 export default Accordion
