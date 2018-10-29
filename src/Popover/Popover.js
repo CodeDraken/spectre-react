@@ -22,7 +22,7 @@ const Popover = ({ children, ...props }) => {
   const classNames = classnames(
     'popover',
     {
-      [`position-${position}`]: position
+      [`popover-${position}`]: position
     },
     className
   )
