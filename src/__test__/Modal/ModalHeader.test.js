@@ -37,6 +37,11 @@ describe('ModalHeader', () => {
     expect(wrapper.type()).toBe('main')
   })
 
+  it('Should have ModalHeader.Title component', () => {
+    expect(ModalHeader.Title).toBeDefined()
+    expect(typeof ModalHeader.Title).toBe('function')
+  })
+
   it('Should match the snapshot', () => {
     const wrapper = shallow(<ModalHeader />)
 
