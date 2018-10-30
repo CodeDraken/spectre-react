@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalHeader Should match the snapshot 1`] = `
+<div
+  className="modal-header"
+/>
+`;
+
+exports[`ModalTitle Should match the snapshot 1`] = `
+<div
+  className="modal-title"
+/>
+`;
