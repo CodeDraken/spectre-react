@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { boolean } from '@storybook/addon-knobs'
 
-import { Modal, Grid, Button } from '../src'
+import { Modal, Grid, Button, ModalTitle } from '../src'
 
 storiesOf('Modal', module)
   .add('Default', () => {
@@ -25,16 +25,15 @@ storiesOf('Modal', module)
             </Button>
 
             <Modal active={this.state.active}>
+              <Modal.Overlay onClick={this.handleToggle} />
               <Modal.Container>
 
                 <Modal.Header>
-                  <Modal.Header.Title>Modal Title</Modal.Header.Title>
+                  <ModalTitle className='h5'>Modal Title</ModalTitle>
                 </Modal.Header>
 
                 <Modal.Body>
-                  <Grid.Container>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque excepturi incidunt odit non ea. Porro, ut inventore autem sint, vero omnis id ab neque voluptate unde distinctio quasi corrupti possimus.</p>
-                  </Grid.Container>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque excepturi incidunt odit non ea. Porro, ut inventore autem sint, vero omnis id ab neque voluptate unde distinctio quasi corrupti possimus.</p>
                 </Modal.Body>
 
                 <Modal.Footer>
@@ -50,7 +49,7 @@ storiesOf('Modal', module)
 
     return (
       <Grid.Container>
-        <p className='m-2'>Toggle a modal by setting the active prop to true or false</p>
+        <p className='m-2'>Toggle a modal by setting the active prop to true or false. You can add the ModalOverlay component to handle clicking off the modal.</p>
         <Grid.Row>
           <Grid.Col all={10}>
 

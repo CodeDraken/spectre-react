@@ -77,6 +77,7 @@ export ModalContainer from './Modal/ModalContainer'
 export ModalFooter from './Modal/ModalFooter'
 export ModalHeader from './Modal/ModalHeader'
 export ModalTitle from './Modal/ModalTitle'
+export ModalOverlay from './Modal/ModalOverlay'
 
 // -------------------
 // Aliases / HOC
