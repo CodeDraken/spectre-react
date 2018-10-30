@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal Should match the snapshot 1`] = `
+<div
+  className="modal"
+/>
+`;
+
+exports[`Modal Should match the use case snapshot 1`] = `
+<div
+  class="modal"
+>
+  <div
+    aria-label="Close"
+    class="modal-overlay"
+  />
+  <div
+    class="modal-container"
+  >
+    <div
+      class="modal-header"
+    >
+      <div
+        class="modal-title h5"
+      >
+        Modal Title
+      </div>
+    </div>
+    <div
+      class="modal-body"
+    >
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque excepturi incidunt odit non ea. Porro, ut inventore autem sint, vero omnis id ab neque voluptate unde distinctio quasi corrupti possimus.
+      </p>
+    </div>
+    <div
+      class="modal-footer"
+    >
+      <button>
+        Share
+      </button>
+      <button>
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+`;
