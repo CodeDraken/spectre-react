@@ -6,5 +6,6 @@ import App from './components/App'
 render(
   <div>
     <App />
-  </div>
-  , document.getElementById('root'))
+  </div>,
+  document.getElementById('root')
+)
