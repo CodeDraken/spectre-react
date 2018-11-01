@@ -26,7 +26,11 @@ const Toast = ({ children, ...props }) => {
     className
   )
 
-  return <Element className={classNames}>{children}</Element>
+  return (
+    <Element {...attributes} className={classNames}>
+      {children}
+    </Element>
+  )
 }
 
 Toast.propTypes = propTypes

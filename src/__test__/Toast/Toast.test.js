@@ -4,7 +4,7 @@ import { shallow } from 'enzyme'
 import { Toast } from '../..'
 
 describe('Toasts', () => {
-  it('Should render a span tag by default', () => {
+  it('Should render a div tag by default', () => {
     const wrapper = shallow(<Toast />)
 
     expect(wrapper.type()).toBe('div')
@@ -17,7 +17,7 @@ describe('Toasts', () => {
   })
 
   it('Should pass additional classNames', () => {
-    const wrapper = shallow(<Toast className='extra'>My Toasts</Toast>)
+    const wrapper = shallow(<Toast className="extra">My Toasts</Toast>)
 
     expect(wrapper.hasClass('extra')).toBe(true)
   })
@@ -29,13 +29,13 @@ describe('Toasts', () => {
   })
 
   it('Should render with "toast-{color}" class when a color is provided', () => {
-    const wrapper = shallow(<Toast color='primary'>Primary</Toast>)
+    const wrapper = shallow(<Toast color="primary">Primary</Toast>)
 
     expect(wrapper.hasClass('toast-primary')).toBe(true)
   })
 
   it('Should render custom tag', () => {
-    const wrapper = shallow(<Toast renderAs='main'>custom</Toast>)
+    const wrapper = shallow(<Toast renderAs="main">custom</Toast>)
 
     expect(wrapper.type()).toBe('main')
   })
@@ -46,15 +46,15 @@ describe('Toasts', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  // it('Should have Toasts classname', () => {
-  //   const wrapper = renderer.create(<Toasts>Test</Toasts>)
+  // it('Should have toast classname', () => {
+  //   const wrapper = renderer.create(<Toast>Test</Toast>)
 
   //   expect(wrapper.toJSON()).toMatchSnapshot()
   // })
 
   // it('Should concat classnames in props with Spectre classnames', () => {
   //   const wrapper = renderer.create(
-  //     <Toasts className='other-class this-is-a-test'>classes</Toasts>
+  //     <Toast className='other-class this-is-a-test'>classes</Toast>
   //   )
 
   //   expect(wrapper.toJSON()).toMatchSnapshot()
@@ -62,7 +62,7 @@ describe('Toasts', () => {
 
   // it('Should use inline styles', () => {
   //   const wrapper = renderer.create(
-  //     <Toasts style={{ width: 250 }}>Inline styles</Toasts>)
+  //     <Toast style={{ width: 250 }}>Inline styles</Toast>)
 
   //   expect(wrapper.toJSON()).toMatchSnapshot()
   // })
