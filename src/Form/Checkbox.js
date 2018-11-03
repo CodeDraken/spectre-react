@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
@@ -9,8 +9,6 @@ const propTypes = {
   small: PropTypes.bool,
   large: PropTypes.bool,
   indeterminate: PropTypes.bool,
-  iconLeft: PropTypes.bool,
-  iconRight: PropTypes.bool,
   renderAs: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   iconWrapper: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
 }
@@ -20,52 +18,64 @@ const defaultProps = {
   label: '',
   large: false,
   small: false,
-  iconLeft: false,
-  iconRight: false,
-  renderAs: 'input',
-  iconWrapper: 'div'
+  renderAs: 'input'
 }
 
-const Checkbox = ({ children, ...props }) => {
-  const {
-    className,
-    name,
-    label,
-    type,
-    small,
-    large,
-    iconRight,
-    iconLeft,
-    renderAs: Element,
-    iconWrapper: Wrapper,
+class Checkbox extends Component {
+  constructor (props) {
+    super(props)
+    this.inputRef = React.createRef()
+  }
 
-    ...attributes
-  } = props
+  componentDidMount () {
+    this.inputRef.current.indeterminate = this.props.indeterminate
+  }
 
-  const classNames = classnames(
-    'form-checkbox',
-    {
-      'input-sm': small,
-      'input-lg': large
-    },
-    className
-  )
+  componentDidUpdate (prevProps) {
+    if (prevProps.indeterminate !== this.props.indeterminate) {
+      this.inputRef.current.indeterminate = this.props.indeterminate
+    }
+  }
 
-  const checkbox = (
-    <label class='form-checkbox'>
-      <Element {...attributes} name={name} type='checkbox' className={classNames} />
-      <i class='form-icon' />{label}
-    </label>
-  )
+  render () {
+    const {
+      className,
+      name,
+      label,
+      type,
+      small,
+      large,
+      children,
+      renderAs: Element,
 
-  const iconPosition = iconLeft ? 'left' : 'right'
+      ...attributes
+    } = this.props
 
-  return iconLeft || iconRight ? (
-    <Wrapper className={`has-icon-${iconPosition}`}>
-      {checkbox}
-      {children}
-    </Wrapper>
-  ) : checkbox
+    const classNames = classnames(
+      'form-checkbox',
+      {
+        'input-sm': small,
+        'input-lg': large
+      },
+      className
+    )
+
+    const checkbox = (
+      <label className={classNames}>
+        <Element
+          {...attributes}
+          name={name}
+          type='checkbox'
+          className={classNames}
+          ref={this.inputRef}
+        />
+        <i className='form-icon' />
+        {label}
+      </label>
+    )
+
+    return checkbox
+  }
 }
 
 Checkbox.propTypes = propTypes
