@@ -50,11 +50,9 @@ storiesOf('Forms', module)
             <Checkbox label='Basic Checkbox' />
             <Checkbox label='Disabled Checkbox' disabled />
             <Checkbox label='Indeterminate Checkbox' indeterminate />
-
-            <Checkbox label='Icon Right'
-              iconRight={boolean('iconRight', true)}>
-              <Icon formIcon icon={text('Icon', 'mail')} />
-            </Checkbox>
+            <Checkbox label='Small'
+              small={boolean('small', true)}
+              large={boolean('large', false)} />
           </form>
         </Col>
       </Row>
