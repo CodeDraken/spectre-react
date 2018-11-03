@@ -4,7 +4,7 @@ import { text, boolean } from '@storybook/addon-knobs'
 
 import {
   Icon, Button, Label,
-  FormGroup, Input,
+  FormGroup, Input, Checkbox,
   Container, Col, Row
 } from '../src'
 
@@ -35,9 +35,26 @@ storiesOf('Forms', module)
             </FormGroup>
 
             <Button type='submit'>
-            Create Account
+              Create Account
               <Icon icon='check' />
             </Button>
+          </form>
+        </Col>
+      </Row>
+    </Container>
+  )).add('Checkbox', () => (
+    <Container>
+      <Row>
+        <Col all={6} xs={12}>
+          <form>
+            <Checkbox label='Basic Checkbox' />
+            <Checkbox label='Disabled Checkbox' disabled />
+            <Checkbox label='Indeterminate Checkbox' indeterminate />
+
+            <Checkbox label='Icon Right'
+              iconRight={boolean('iconRight', true)}>
+              <Icon formIcon icon={text('Icon', 'mail')} />
+            </Checkbox>
           </form>
         </Col>
       </Row>
