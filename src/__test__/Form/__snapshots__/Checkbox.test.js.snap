@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox Should match the default snapshot 1`] = `
+<label
+  class="form-checkbox"
+>
+  <input
+    class="form-checkbox"
+    type="checkbox"
+  />
+  <i
+    class="form-icon"
+  />
+</label>
+`;
+
+exports[`Checkbox Should match the snapshot with a label 1`] = `
+<label
+  class="form-checkbox"
+>
+  <input
+    class="form-checkbox"
+    type="checkbox"
+  />
+  <i
+    class="form-icon"
+  />
+  A Label
+</label>
+`;
+
+exports[`Checkbox Should not render children 1`] = `
+<label
+  class="form-checkbox"
+>
+  <input
+    class="form-checkbox"
+    type="checkbox"
+  />
+  <i
+    class="form-icon"
+  />
+</label>
+`;
+
+exports[`Checkbox Should render as a custom element 1`] = `
+<label
+  class="form-checkbox"
+>
+  <main
+    class="form-checkbox"
+    type="checkbox"
+  />
+  <i
+    class="form-icon"
+  />
+</label>
+`;
