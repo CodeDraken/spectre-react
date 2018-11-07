@@ -53,16 +53,17 @@ class Tab extends Component {
     if (!panes) {
       return (
         <div>
-          Please specify a panes prop or use the controlled Tab component
+          Please specify a panes prop or use the controlled Tab components
         </div>
       )
     }
 
     const activeIndex = this.state.activeIndex
-
-    const classNames = classnames('my-class', className)
+    const classNames = classnames(className) || null
 
     const menuItems = panes.map(({ menuEl, menuContent, key }, i) => {
+      // default to tab i if no text or component supplied
+      const content = menuContent || `Tab ${i + 1}`
       return (
         <TabMenuItem
           active={activeIndex === i}
@@ -71,9 +72,9 @@ class Tab extends Component {
           onClick={() => this.setActiveTab(i)}
         >
           {
-            typeof menuContent === 'string'
-              ? <a className='btn btn-link'>{ menuContent }</a>
-              : menuContent
+            typeof content === 'string'
+              ? <a className='btn btn-link'>{ content }</a>
+              : content
           }
         </TabMenuItem>
       )
@@ -87,7 +88,7 @@ class Tab extends Component {
           { menuItems }
         </TabMenu>
 
-        <Pane />
+        { Pane && <Pane /> }
       </Element>
     )
   }
