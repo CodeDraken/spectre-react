@@ -6,23 +6,19 @@ const propTypes = {
   children: PropTypes.node,
   renderAs: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
-  block: PropTypes.bool
+  active: PropTypes.bool,
+  action: PropTypes.bool
 }
 
 const defaultProps = {
-  renderAs: 'ul',
-  block: false
+  renderAs: 'li',
+  active: false,
+  action: false
 }
 
-const TabMenu = ({ children, ...props }) => {
-  const { className, block, renderAs: Element, ...attributes } = props
-  const classNames = classnames(
-    'tab',
-    {
-      'tab-block': block
-    },
-    className
-  )
+const TabMenuItem = ({ children, ...props }) => {
+  const { className, renderAs: Element, ...attributes } = props
+  const classNames = classnames('tab-item', className)
 
   return (
     <Element {...attributes} className={classNames}>
@@ -31,7 +27,7 @@ const TabMenu = ({ children, ...props }) => {
   )
 }
 
-TabMenu.propTypes = propTypes
-TabMenu.defaultProps = defaultProps
+TabMenuItem.propTypes = propTypes
+TabMenuItem.defaultProps = defaultProps
 
-export default TabMenu
+export default TabMenuItem
