@@ -17,8 +17,22 @@ const defaultProps = {
 }
 
 const TabMenuItem = ({ children, ...props }) => {
-  const { className, renderAs: Element, ...attributes } = props
-  const classNames = classnames('tab-item', className)
+  const {
+    className,
+    active,
+    action,
+    renderAs: Element,
+
+    ...attributes
+  } = props
+
+  const classNames = classnames(
+    'tab-item',
+    {
+      active
+    },
+    className
+  )
 
   return (
     <Element {...attributes} className={classNames}>

@@ -28,7 +28,15 @@ const defaultProps = {
 
 class Tab extends Component {
   state = {
-    activeTab: 0
+    activeIndex: 0
+  }
+
+  setActiveTab (i) {
+    if (i !== this.state.activeIndex) {
+      this.setState({
+        activeIndex: i
+      })
+    }
   }
 
   render () {
@@ -42,16 +50,36 @@ class Tab extends Component {
       ...attributes
     } = this.props
 
+    if (!panes) {
+      return (
+        <div>
+          Please specify a panes prop or use the controlled Tab component
+        </div>
+      )
+    }
+
+    const activeIndex = this.state.activeIndex
+
     const classNames = classnames('my-class', className)
 
-    const menuItems = panes.map(({ menuEl, menuContent, key }, i) =>
-      <TabMenuItem
-        active={this.state.activeIndex === i}
-        key={key || i}
-        renderAs={menuEl}>
-        { menuContent }
-      </TabMenuItem>
-    )
+    const menuItems = panes.map(({ menuEl, menuContent, key }, i) => {
+      return (
+        <TabMenuItem
+          active={activeIndex === i}
+          key={key || i}
+          renderAs={menuEl}
+          onClick={() => this.setActiveTab(i)}
+        >
+          {
+            typeof menuContent === 'string'
+              ? <a className='btn btn-link'>{ menuContent }</a>
+              : menuContent
+          }
+        </TabMenuItem>
+      )
+    })
+
+    const Pane = panes[activeIndex].render
 
     return (
       <Element {...attributes} className={classNames}>
@@ -59,7 +87,7 @@ class Tab extends Component {
           { menuItems }
         </TabMenu>
 
-        { children }
+        <Pane />
       </Element>
     )
   }
