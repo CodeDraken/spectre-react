@@ -51,11 +51,12 @@ class Tab extends Component {
     } = this.props
 
     if (!panes) {
-      return (
-        <div>
-          Please specify a panes prop or use the controlled Tab components
-        </div>
-      )
+      throw new Error('Please specify a panes prop or use the controlled Tab components')
+      // return (
+      //   <div>
+      //     Please specify a panes prop or use the controlled Tab components
+      //   </div>
+      // )
     }
 
     const activeIndex = this.state.activeIndex

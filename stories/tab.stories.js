@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { Tab, Grid } from '../src'
+import { Tab, TabMenu, TabMenuItem, Grid } from '../src'
 
 storiesOf('Tab', module)
   .add('Default', () => {
@@ -22,6 +22,42 @@ storiesOf('Tab', module)
           <Grid.Col all={10} offset='mx'>
 
             <Tab block panes={panes} />
+
+          </Grid.Col>
+        </Grid.Row>
+      </Grid.Container>
+    )
+  })
+  .add('Custom / Controlled', () => {
+    const MyTabs = () => (
+      <div>
+        <TabMenu block>
+          <TabMenu.Item
+            active
+            onClick={() => window.alert('clicked 1')}
+          >
+            <a className='btn btn-link'>Active</a>
+          </TabMenu.Item>
+          <TabMenu.Item
+            onClick={() => window.alert('clicked 2')}
+          >
+            <a className='btn btn-link'>Another Tab</a>
+          </TabMenu.Item>
+        </TabMenu>
+
+        <div>
+          Tab Pane
+          <p>You would manually control what shows here and the switching between tabs. ( see the default story for an easier way to use it )</p>
+        </div>
+      </div>
+    )
+
+    return (
+      <Grid.Container>
+        <Grid.Row>
+          <Grid.Col all={10} offset='mx'>
+
+            <MyTabs />
 
           </Grid.Col>
         </Grid.Row>

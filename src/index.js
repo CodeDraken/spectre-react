@@ -29,7 +29,7 @@ export NavItem from './Nav/NavItem'
 // Tab
 export Tab from './Tab'
 export TabMenu from './Tab/TabMenu'
-export TabMenuItem from './Tab/TabMenu'
+export TabMenuItem from './Tab/TabMenuItem'
 
 // Tile
 export Tile from './Tile'
