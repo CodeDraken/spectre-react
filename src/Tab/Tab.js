@@ -10,6 +10,7 @@ const propTypes = {
   renderAs: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   block: PropTypes.bool,
+  activeIndex: PropTypes.number,
   panes: PropTypes.arrayOf(
     PropTypes.shape({
       menuEl: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -28,7 +29,7 @@ const defaultProps = {
 
 class Tab extends Component {
   state = {
-    activeIndex: 0
+    activeIndex: this.props.activeIndex || 0
   }
 
   setActiveTab (i) {
@@ -57,6 +58,8 @@ class Tab extends Component {
       //     Please specify a panes prop or use the controlled Tab components
       //   </div>
       // )
+    } else if (panes.length < 1) {
+      return
     }
 
     const activeIndex = this.state.activeIndex

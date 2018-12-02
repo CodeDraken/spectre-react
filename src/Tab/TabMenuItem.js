@@ -29,7 +29,8 @@ const TabMenuItem = ({ children, ...props }) => {
   const classNames = classnames(
     'tab-item',
     {
-      active
+      active,
+      'tab-action': action
     },
     className
   )

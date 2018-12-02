@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { Tab, TabMenu, TabMenuItem, Grid } from '../src'
+import { Tab, TabMenu, Grid } from '../src'
 
 storiesOf('Tab', module)
   .add('Default', () => {
