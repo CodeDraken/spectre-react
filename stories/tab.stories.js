@@ -21,7 +21,7 @@ storiesOf('Tab', module)
         <Grid.Row>
           <Grid.Col all={10} offset='mx'>
 
-            <Tab block panes={panes} />
+            <Tab onTabChange={console.log} activeIndex={2} block panes={panes} />
 
           </Grid.Col>
         </Grid.Row>
