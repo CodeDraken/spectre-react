@@ -50,16 +50,6 @@ describe('Tab', () => {
     expect(items.at(2).shallow().text()).toBe('Tab 3')
   })
 
-  // it('Should pass props to MenuItems', () => {
-  //   const wrapper = shallow(<Tab panes={panes} />)
-  //   const item = wrapper
-  //     .find('TabMenu')
-  //     .shallow()
-  //     .childAt(0)
-
-  //   expect(item.props()).toBe({})
-  // })
-
   it('Should pass the "block" prop to the TabMenu', () => {
     const wrapper = shallow(<Tab block panes={panes} />)
 
@@ -91,6 +81,64 @@ describe('Tab', () => {
   })
 
   describe('Controls', () => {
+    it('Should pass activeIndex prop to the Tab state', () => {
+      const wrapper = mount(<Tab panes={panes} activeIndex={1} />)
 
+      expect(wrapper.state('activeIndex')).toBe(1)
+    })
+
+    it('Should set activeIndex on the Tab state when an item is clicked', () => {
+      const wrapper = mount(<Tab panes={panes} />)
+
+      expect(wrapper.find('TabMenuItem[active=true]').text()).toBe('Tab 1')
+      expect(wrapper.state('activeIndex')).toBe(0)
+
+      wrapper
+        .find('TabMenuItem')
+        .at(1)
+        .simulate('click')
+
+      expect(wrapper.state('activeIndex')).toBe(1)
+      expect(wrapper.find('TabMenuItem[active=true]').text()).toBe('Custom menu item')
+    })
+
+    it('Should only render the active pane', () => {
+      const renderSpy = jest.fn(() => <div>Spy Pane</div>)
+      const panesCustom = [
+        { menuContent: 'Tab 1', render: () => <div>Tab 1 Pane</div> },
+        { menuContent: 'Tab 2', render: () => <div>Tab 2 Pane</div> },
+        { menuContent: 'Tab 3', render: renderSpy }
+      ]
+
+      const wrapper = mount(<Tab activeIndex={0} panes={panesCustom} />)
+
+      wrapper
+        .setState({ activeIndex: 1 })
+        .setState({ activeIndex: 2 })
+
+      expect(wrapper.find('TabMenuItem[active=true]').text()).toBe('Tab 3')
+      expect(renderSpy.mock.calls.length).toBe(1)
+    })
+
+    it('Should call onTabChange if provided, and pass the new and old active indexes', () => {
+      const changeSpy = jest.fn()
+      const panesCustom = [
+        { menuContent: 'Tab 1', render: () => <div>Tab 1 Pane</div> },
+        { menuContent: 'Tab 2', render: () => <div>Tab 2 Pane</div> },
+        { menuContent: 'Tab 3', render: () => <div>Tab 3 Pane</div> }
+      ]
+
+      const wrapper = mount(<Tab onTabChange={changeSpy} activeIndex={0} panes={panesCustom} />)
+
+      wrapper
+        .find('TabMenuItem')
+        .at(1)
+        .simulate('click')
+
+      expect(changeSpy.mock.calls.length).toBe(1)
+      expect(changeSpy.mock.calls[0][0]).toEqual({
+        next: 1, previous: 0
+      })
+    })
   })
 })

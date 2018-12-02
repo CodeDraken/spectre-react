@@ -11,6 +11,7 @@ const propTypes = {
   className: PropTypes.string,
   block: PropTypes.bool,
   activeIndex: PropTypes.number,
+  onTabChange: PropTypes.func,
   panes: PropTypes.arrayOf(
     PropTypes.shape({
       menuEl: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -33,10 +34,15 @@ class Tab extends Component {
   }
 
   setActiveTab (i) {
-    if (i !== this.state.activeIndex) {
+    const activeIndex = this.state.activeIndex
+    if (i !== activeIndex) {
       this.setState({
         activeIndex: i
       })
+
+      if (this.props.onTabChange) {
+        this.props.onTabChange({ previous: activeIndex, next: i })
+      }
     }
   }
 
@@ -46,6 +52,8 @@ class Tab extends Component {
       className,
       panes,
       block,
+      onTabChange,
+      activeIndex: propIndex,
       renderAs: Element,
 
       ...attributes
@@ -53,17 +61,16 @@ class Tab extends Component {
 
     if (!panes) {
       throw new Error('Please specify a panes prop or use the controlled Tab components')
-      // return (
-      //   <div>
-      //     Please specify a panes prop or use the controlled Tab components
-      //   </div>
-      // )
-    } else if (panes.length < 1) {
+    } else if (!panes.length) {
       return
     }
 
     const activeIndex = this.state.activeIndex
     const classNames = classnames(className) || null
+
+    if (activeIndex > panes.length - 1) {
+      throw new Error('activeIndex is greater than the amount of tab items')
+    }
 
     const menuItems = panes.map(({ menuEl, menuContent, key }, i) => {
       // default to tab i if no text or component supplied
