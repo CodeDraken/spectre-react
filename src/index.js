@@ -26,6 +26,11 @@ export NavbarSection from './Navbar/NavbarSection'
 export Nav from './Nav'
 export NavItem from './Nav/NavItem'
 
+// Tab
+export Tab from './Tab'
+export TabMenu from './Tab/TabMenu'
+export TabMenuItem from './Tab/TabMenuItem'
+
 // Tile
 export Tile from './Tile'
 export TileAction from './Tile/TileAction'
