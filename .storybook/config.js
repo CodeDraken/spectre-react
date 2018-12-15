@@ -4,8 +4,14 @@ import { setOptions } from '@storybook/addon-options';
 import { select, withKnobs } from '@storybook/addon-knobs';
 // import { configureViewport, INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import backgrounds from '@storybook/addon-backgrounds';
+import '@storybook/addon-console';
+import { setConsoleOptions, withConsole } from '@storybook/addon-console';
 
 // addDecorator(withInfo())
+setConsoleOptions({
+  panelExclude: [],
+});
+addDecorator((storyFn, context) => withConsole()(storyFn)(context));
 
 setOptions({
   name: 'Spectre React Components',

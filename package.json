@@ -47,6 +47,7 @@
     "@storybook/addon-actions": "^3.4.10",
     "@storybook/addon-backgrounds": "^3.4.10",
     "@storybook/addon-centered": "^3.4.10",
+    "@storybook/addon-console": "^1.1.0",
     "@storybook/addon-events": "^3.4.10",
     "@storybook/addon-info": "^3.4.10",
     "@storybook/addon-knobs": "^3.4.10",
