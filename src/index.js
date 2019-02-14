@@ -8,6 +8,7 @@ export Icon from './Icon'
 export Label from './Label'
 export Code from './Code'
 export Chip from './Chip'
+export Toast from './Toast'
 
 // -------------------
 // GROUPED COMPONENTS
